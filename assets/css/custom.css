@@ -1,0 +1,21 @@
+.wpm.site-author-links-wrapper {
+  margin-bottom: 0
+}
+
+.wpm.site-author-links > a {
+  font-size: 3em;
+  transform: translateY(20px);
+  filter: drop-shadow(0 0 7px rgba(0,0,0,0.4));
+  transition: all 250ms ease-in-out;
+}
+
+.wpm.site-author-links-wrapper ~ .prose {
+  font-size: 99em !important;
+}
+
+@media (hover:hover) {
+  .wpm.site-author-links > a:hover {
+    transform: scale(0.99) translateY(20px);
+    filter: drop-shadow(0 0 7px rgba(0,0,0,0));
+  }
+}

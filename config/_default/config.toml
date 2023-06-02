@@ -4,7 +4,7 @@
 
 theme = "blowfish"
 baseURL = "https://gustavewpm.github.io"
-defaultContentLanguage = "en"
+defaultContentLanguage = "fr"
 
 enableRobotsTXT = true
 paginate = 20
@@ -22,7 +22,7 @@ buildFuture = false
   series = "series"
 
 [sitemap]
-  changefreq = 'daily'
+  changefreq = 'weekly'
   filename = 'sitemap.xml'
   priority = 0.5
 

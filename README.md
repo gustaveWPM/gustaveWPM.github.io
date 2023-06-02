@@ -1,6 +1,17 @@
-# Blowfish Template
-This is a template for the Blowfish Hugo Theme. Feel free to use this repo as a quick way to get started with Blowfish. Please visit [Blowfish's main website](https://github.com/nunocoracao/blowfish) to read the complete documentation.
+# GustaveWPM's Portfolio
 
-The template was built using the [Git option](https://nunocoracao.github.io/blowfish/docs/installation/#install-using-git) from Blowfish's installations instructions.
+## You have never done a portfolio?
 
-![blowfish logo](https://github.com/nunocoracao/blowfish_template/blob/main/logo.png?raw=true)
+I didn't either...  
+This is my first portfolio.  
+
+Project made during an _OpenClassrooms_ bootcamp.  
+[Learning path: _Développeur Web_](https://openclassrooms.com/fr/paths/717-developpeur-web)
+
+#### Demo
+
+[https://gustavewpm.github.io/](https://gustavewpm.github.io/)
+
+---
+
+<p align="center"><em>This GitHub repository is not part of the OPENCLASSROOMS website or OPENCLASSROOMS SAS.<br>Additionally, this GitHub repository is NOT endorsed by OPENCLASSROOMS in any way.<br>OPENCLASSROOMS is a trademark of OPENCLASSROOMS, SAS.</em></p>

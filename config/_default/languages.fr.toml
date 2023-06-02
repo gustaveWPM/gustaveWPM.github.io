@@ -1,23 +1,24 @@
-languageCode = "en"
-languageName = "English"
-displayName = "EN"
-isoCode = "en"
+title = "GustaveWPM"
+description = "Découvrez mes projets et mon blog de développeur web grâce auquel je partage ma passion ! Exemples de technologies utilisées : React, TypeScript, ExpressJS, Hugo..."
+languageCode = "fr"
+languageName = "Français"
+isoCode = "fr"
 weight = 1
 rtl = false
 
-title = "Blowfish"
-# logo = "img/logo.png"
-description = "My awesome website"
+logo = "/img/wpm-logo.webp"
 # copyright = "Copy, _right?_ :thinking_face:"
 
+displayName = "FR"
 dateFormat = "2 January 2006"
 
+
 [author]
-  name = "Your name here"
-  image = "img/blowfish_logo.png"
-  headline = "I'm only human"
-  bio = "A little bit about you"
-  # links = [
+  name = "Gustave"
+  image = "/img/wpm-avatar.webp"
+  headline = "(Je suis très chouette)"
+  bio = "Je suis un <strong>développeur web</strong> passionné par l'élégance du <strong>TypeScript</strong>."
+  links = [
   #   { email = "mailto:hello@your_domain.com" },
   #   { link = "https://link-to-some-website.com/" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
@@ -30,7 +31,7 @@ dateFormat = "2 January 2006"
   #   { facebook = "https://facebook.com/username" },
   #   { flickr = "https://www.flickr.com/photos/username/" },
   #   { foursquare = "https://foursquare.com/username" },
-  #   { github = "https://github.com/username" },
+     { github = "https://github.com/gustaveWPM" },
   #   { gitlab = "https://gitlab.com/username" },
   #   { google = "https://www.google.com/" },
   #   { hashnode = "https://username.hashnode.dev" },
@@ -38,7 +39,7 @@ dateFormat = "2 January 2006"
   #   { keybase = "https://keybase.io/username" },
   #   { kickstarter = "https://www.kickstarter.com/profile/username" },
   #   { lastfm = "https://lastfm.com/user/username" },
-  #   { linkedin = "https://linkedin.com/in/username" },
+  #   { linkedin = "https://www.linkedin.com/in/username" },
   #   { mastodon = "https://mastodon.instance/@username" },
   #   { medium = "https://medium.com/username" },
   #   { microsoft = "https://www.microsoft.com/" },
@@ -60,4 +61,4 @@ dateFormat = "2 January 2006"
   #   { whatsapp = "https://wa.me/phone-number" },
   #   { youtube = "https://youtube.com/username" },
   #   { ko-fi = "https://ko-fi.com/username" },
-  # ]
+  ]
