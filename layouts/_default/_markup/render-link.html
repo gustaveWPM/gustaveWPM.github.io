@@ -1,0 +1,19 @@
+{{- $linkurl := .Destination -}}
+{{- $relval := "" -}}
+{{- $targetval := "" -}}
+{{- $classval := "" -}}
+{{- if strings.HasPrefix $linkurl "http" -}}
+  {{- $targetval = "_blank" -}}
+  {{- $relval = "noopener" -}}
+  {{- $classval = "wpm external" -}}
+{{- end -}}
+{{- if strings.HasSuffix $linkurl "#?" }} 
+  {{- $relval = printf "%s %s" $relval "nofollow" -}}
+  {{- $linkurl = strings.TrimSuffix "#?" $linkurl -}}
+{{- end -}}
+<a href="{{ $linkurl | safeURL }}"
+  {{- with .Title}} title="{{ trim . " " }}"{{ end -}}
+  {{- with $relval}} rel="{{ trim . " " }}"{{ end -}}
+  {{- with $targetval}} target="{{ trim . " " }}"{{ end -}}
+  {{- with $classval}} class="{{ trim . " " }}"{{ end -}}
+>{{ .Text | safeHTML }}</a>
