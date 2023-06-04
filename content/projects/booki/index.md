@@ -13,7 +13,7 @@ series_order: 1
 {{< lead >}}
 Ce projet peut vous intéresser si **vous commencez en tant que développeur web**, et souhaitez **apprendre les fondamentaux du développpement front-end.**
 
-Tout premier projet du [parcours de développeur web d'_OpenClassrooms_](https://openclassrooms.com/fr/paths/717-developpeur-web#?), Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.
+Tout premier projet du [parcours de développeur web d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.
 {{< /lead >}}
 
 {{< alert "circle-info" >}}
@@ -41,7 +41,7 @@ Réaliser ce projet permet d'apprendre les deux langages incontournables dans le
 <strong>Cliquez sur le bouton ci-dessous pour découvrir la page web que j'ai réalisée et accédez-y dès maintenant !</strong><br /><br />
 &nbsp;
 {{< button href="https://gustavewpm.github.io/OC-Booki/" target="_blank">}}
-:point_right: Je lance la démo !
+:point_right: Lancer la démo !
 {{< /button >}}
 </p>
 
@@ -81,7 +81,7 @@ Avant de commencer à travailler, je vous recommande de comprendre (dans les gra
 
 <p align="center">
 {{< button href="#avant-de-se-lancer-css" >}}
-:down_arrow: Je me suis déjà lancé sur le HTML, place au CSS !
+:down_arrow: Passer directement au CSS
 {{< /button >}}
 </p>
 
@@ -108,9 +108,9 @@ _\* Le raccourci clavier sera `Commande + Shift + P` sur Mac._
 </div>
 
 **Vous pouvez également vous épauler d'une IA :**
-- [:link: ChatGPT](https://chat.openai.com#?),
-- [:link: Perplexity](https://perplexity.ai#?),
-- [:link: GitHub Copilot](https://github.com/features/copilot#?),
+- [:link: ChatGPT,](https://chat.openai.com#?)
+- [:link: Perplexity,](https://perplexity.ai#?)
+- [:link: GitHub Copilot,](https://github.com/features/copilot#?)
 - ou autre outil IA de votre choix.
 
 {{< alert >}}
@@ -200,7 +200,7 @@ De plus, **le respect des normes du W3C peut contribuer positivement au référe
 
 <p align="center">
 {{< button href="https://validator.w3.org/#validate_by_input#?" target="_blank">}}
-:point_right: Je vérifie mon code HTML !
+:point_right: Vérifier mon HTML
 {{< /button >}}
 </p>
 
@@ -222,11 +222,11 @@ L'importance des sélecteurs CSS réside dans leur capacité à apporter **flexi
 
 En utilisant des sélecteurs bien choisis, il est possible de définir des styles pour des éléments individuels, des classes d'éléments ou des groupes d'éléments, ce qui permet **de personnaliser l'apparence d'une page de manière signifiante**.
 
-> Ils peuvent également s'avérer **utiles pour l'écriture d'outils de _scraping_ ou de _tests automatisés_.** ([_Puppeteer_](https://pptr.dev#?), [_Playwright_](https://playwright.dev#?), [_Selenium + Beautiful Soup_](https://medium.com/ymedialabs-innovation/web-scraping-using-beautiful-soup-and-selenium-for-dynamic-page-2f8ad15efe25#?)...)
+> Ils peuvent également s'avérer **utiles pour l'écriture d'outils de _scraping_ ou de _tests automatisés_.** ([_Puppeteer_,](https://pptr.dev#?) [_Playwright_,](https://playwright.dev#?) [_Selenium + Beautiful Soup_](https://medium.com/ymedialabs-innovation/web-scraping-using-beautiful-soup-and-selenium-for-dynamic-page-2f8ad15efe25#?)...)
 
 <p align="center">
 {{< button href="https://flukeout.github.io/#?" target="_blank">}}
-:point_right: Je travaille ma mémoire sur les sélecteurs CSS !
+:point_right: Réviser les sélecteurs CSS
 {{< /button >}}
 </p>
 
@@ -234,13 +234,13 @@ En utilisant des sélecteurs bien choisis, il est possible de définir des style
 
 #### Validateur W3C (HTML/CSS)
 
-Nous avons déjà présenté le **validateur W3C** [:up_arrow: un peu plus tôt dans cet article](#validateur-w3c-html).
+Nous avons déjà présenté le **validateur W3C** [:up_arrow: un peu plus tôt dans cet article.](#validateur-w3c-html)
 
 Cependant, comme la page du validateur permettant d'activer ou non l'option « **CSS** » n'est pas évidente à trouver du premier coup...
 
 <p align="center">
 {{< button href="https://validator.w3.org/nu/#textarea#?" target="_blank">}}
-:point_right: Je vérifie mon code HTML (ou CSS) !
+:point_right: Vérifier mon CSS
 {{< /button >}}
 </p>
 
