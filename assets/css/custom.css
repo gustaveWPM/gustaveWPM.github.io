@@ -6,11 +6,25 @@
   font-size: 3em;
   transform: translateY(20px);
   filter: drop-shadow(0 0 7px rgba(0,0,0,0.4));
-  transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out
 }
 
 .wpm.site-author-links-wrapper ~ .prose {
-  font-size: 99em !important;
+  font-size: 99em !important
+}
+
+.wpm.blog-post-illustration-figure.is-resized img {
+  max-height: 400px !important;
+  margin: auto
+}
+
+.wpm.blog-post-illustration-figure.centered-figcaption figcaption {
+  text-align: center
+}
+
+.wpm.fake-figcaption {
+  font-size: .875em;
+  color: var(--tw-prose-captions)
 }
 
 @media (hover:hover) {

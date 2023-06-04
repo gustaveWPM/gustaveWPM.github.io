@@ -1,6 +1,7 @@
 ---
 title: "GustaveWPM | Page d’accueil"
 description: "Découvrez mes projets et mon blog de développeur web grâce auquel je partage ma passion ! Exemples de technologies utilisées : React, TypeScript, ExpressJS, Hugo..."
+ogImage: "/og/homepage.jpg"
 ---
 
 ## `Hello world`
