@@ -9,4 +9,8 @@ ogImage: "/og/homepage.jpg"
 Je suis un **développeur web** passionné par l'élégance du **TypeScript**.  
 Je partage ici mes projets dans mes **articles de blog**.
 
-_(Il m'arrive aussi de coder autre chose que du web.)_
+{{< typeit 
+  speed=15
+>}}
+<em>(Il m'arrive aussi de coder d'autres choses.)</em>
+{{< /typeit >}}
