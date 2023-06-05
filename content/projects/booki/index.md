@@ -378,7 +378,7 @@ Comme on en a plutôt l'habitude en programmation : **le code CSS est lu de haut
 
 {{< alert "circle-info" >}}
 Et tout comme j'en ai également eu l'habitude avec des langages de programmation dits _dynamiques_ : **il est possible de "Patcher" du code CSS en le réécrivant tout ou partie un peu plus bas que là où il a été déclaré pour la première fois.**  
-[:link: _Monkey patching_.](https://fr.wikipedia.org/wiki/Monkey-Patch)
+[:link: _Monkey patching_](https://fr.wikipedia.org/wiki/Monkey-Patch)
 {{< /alert >}}
 
 ##### Simple rappel concernant la notion de surchage en CSS
@@ -750,7 +750,7 @@ C'est très embêtant.
 Mais alors que faire ?
 Également écrire `.filter-button.has-tweakers` dans mes media queries ?  
 
-**Je trouve ce choix très ennuyeux**, car j'aimerais que lorsque je navigue de `.has-tweakers` en `.has-tweakers` dans mon fichier CSS à l'aide du raccourci clavier `CTRL + F`, je ne puisse pas **brutalement changer de contexte de configuration sans m'en rendre compte**.
+**Je trouve ce choix très ennuyeux**, car j'aimerais que lorsque je navigue de `.has-tweakers` en `.has-tweakers` dans mon fichier CSS à l'aide du raccourci clavier `CTRL+F`, je ne puisse pas **brutalement changer de contexte de configuration sans m'en rendre compte**.
 
 J'ai donc à la place fait le choix de créer une nouvelle classe, `.enable-tweakers-bypass`.  
 
@@ -801,6 +801,10 @@ Merci de m'avoir lu !
 
 ### Liens externes
 
+{{< alert "circle-info" >}}
+**Si vous êtes dév : il y a aussi quelques liens en bonus pour vous.**
+{{< /alert >}}
+
 - Workflow
   - [:link: :fr: Mettez en place votre environnement front-end (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/6943241-mettez-en-place-votre-environnement-front-end)
   - [:link: :fr: Gérez du code avec Git et GitHub (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github)
@@ -819,8 +823,7 @@ Merci de m'avoir lu !
   - [:link: :us: Se perfectionner en CSS : _CSS Tricks_](https://css-tricks.com#?)
 
 - Astuces de normalisation CSS
-  - [:link: :fr: _Monkey patching_.](https://fr.wikipedia.org/wiki/Monkey-Patch)
-  - [:link: :us: _CSS variables: Scoping_](https://blog.logrocket.com/css-variables-scoping/)
+  - [:link: :fr: _Monkey patching_](https://fr.wikipedia.org/wiki/Monkey-Patch)
   - [:link: :us: _CSS variables: Scoping_](https://blog.logrocket.com/css-variables-scoping/)
   - [:link: :us: _How to Override CSS Styles_](https://www.w3docs.com/snippets/css/how-to-override-css-styles.html)
   - [:link: :us: _Delightful ways to write reusable CSS using subclasses_](https://medium.com/insider-inc-engineering/delightful-ways-to-write-reusable-css-using-subclasses-903e90c9cf87)
