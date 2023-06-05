@@ -262,7 +262,7 @@ Cependant, comme la page du validateur permettant d'activer ou non l'option « *
 ## Choix personnels
 
 {{< alert >}}
-Il n'était pas autorisé d'utiliser SASS, ni de Javascript, ni de bundler...
+Il n'était pas autorisé d'utiliser _SASS_, ni de _Javascript_, ni de _bundler_...
 {{< /alert >}}
 
 ### Rappels des contraintes (arbitraires) de l'exercice
@@ -319,7 +319,7 @@ Malgré ce choix, les _Pages speed_ restent très bons à l'heure où j'écris c
 >}}
 </div>
 
-##### Regarder ce que donnent les benchmarks des _Pages speed_ plutôt que de partir sur des _a priori_
+##### Regarder ce que donnent les _benchmarks_ des _Pages speed_ plutôt que de partir sur des _a priori_
 
 Cela est notamment lié au design de la version mobile où **seulement une image est chargée sur téléphone lors du _First Contentful Paint_**.  
 
@@ -396,7 +396,7 @@ html p {
   color: red;
 }
 
-// * ... Monkey patch
+/* ... Monkey patch */
 html p {
   color: blue;
 }
@@ -456,11 +456,344 @@ Cela permet d'appliquer une intelligence encore plus fine à son utilisation des
 
 ---
 
-##### Le pseudo élément `:root` en CSS
+##### Le pseudo-élément `:root` en CSS
+
+Le pseudo-élément `:root` va nous permettre de déclarer des _variables globales_.  
+Ces variables sont utilisables dans tous les fichiers CSS d'un projet.  
+
+{{< alert "circle-info" >}}
+Dans notre cas, nous n'avons qu'un seul fichier de feuille de style : le fichier `style.css`.  
+Nos variables seront donc utilisables dans l'intégralité de ce fichier.  
+**Gardez tout de même à l'esprit que dans le cas où vous ajouteriez de nouveaux fichiers CSS, ces variables y seraient également accessibles.**
+{{< /alert >}}
+
+Je vais donc pouvoir utiliser ce pseudo-élément en le considérant comme un module `Configuration` :
+
+```css
+:root {
+  /* Configuration.globalLayout => font */
+  --booki-font: 'Raleway';
+
+  /* Configuration.chart => Static Colors */
+  --booki-chart-primary: #0065FC;
+  --booki-chart-bg-color: #F2F2F2;
+  --booki-chart-sections-bg-color: white;
+  --booki-chart-filter-border-color: #D9D9D9;
+
+  /* Configuration.chart => FX Colors */
+  --booki-chart-filter-btn-hover: #DEEBFF;
+  --booki-inactive-menu-elm-indicator-color: transparent;
+  --booki-active-menu-elm-indicator-color: var(--booki-chart-primary);
+  --booki-chart-blue-btn-hover: var(--booki-chart-primary);
+
+  /* ... */
+}
+```
+
+À présent, si j'écris plus bas dans mon code CSS :
+
+```css
+html p {
+  color: var(--booki-chart-primary);
+}
+```
+
+Les paragraphes de ma page auront alors la couleur : `#0065FC`.
+
+##### Une volonté personnelle de séparer la configuration et l'implémentation
+
+**J'ai à présent mes variables globales dans mon pseudo-élément `:root`.**  
+
+Je voudrais, immédiatement après dans mon code CSS, décrire la configuration globale de chacun de mes éléments.
+
+**J'aurais bien aimé pouvoir séparer ces informations dans plusieurs fichiers CSS, puis jouer avec la _at-rule_ `@import` et un _bundler_ afin de pouvoir tout regrouper dans un seul fichier CSS...**
+
+{{< alert >}}
+**Mais ce n'était pas possible !**  
+Les contraintes imposées sur ce projet ne me le permettaient pas.
+{{< /alert >}}
+
+Afin de clarifier cette volonté dans mon choix de réalisation du projet, j'ai donc décidé d'appeler cette spécificité des _Tweakers_ dans mon code, et ajouté une classe `.has-tweakers` sur les éléments concernés.
+
+_(Et ce n'était pas idéal, nous en rediscuterons.)_
+
+Ainsi :
+
+```css
+/* Constants: Top level wrapper width */
+#top-level-wrapper.has-tweakers {
+  --_width: 1400px;
+}
+
+/* Constants: Header nav's deadzone, header's height and its bottom gap */
+#header.has-tweakers {
+  min-height: 65px;
+  margin-bottom: 55px;
+}
+
+/* Mutables: Header navigation menu's colors (NOT on mouse-over) */
+.header-nav.has-tweakers {
+  --_menu-active-item-hyperlink-color: inherit;
+  --_menu-active-item-border-top-color: var(--booki-inactive-menu-elm-indicator-color);
+}
+
+/* Mutables: Header navigation menu's colors (WHEN on mouse-over) */
+.header-nav-item.has-tweakers:hover {
+  --_menu-active-item-hyperlink-color: var(--booki-chart-primary);
+  --_menu-active-item-border-top-color: var(--booki-active-menu-elm-indicator-color);
+  border-top-width: var(--_border-top-width);
+}
+
+/* ... */
+```
+
+J'ai également fait le choix d'écrire sous forme de variables certaines spécifications.  
+Ce qui m'a permis par exemple de **calculer dynamiquement la largeur du wrapper qui englobe tout le contenu de ma page web selon la largeur spécifiée sur la maquette (1400 pixels), et ma gestion d'état du _fond perdu_ de ma page.**
+
+```css
+/* Webpage Wrapper */
+#top-level-wrapper {
+  /* ... */
+  max-width: calc(var(--_width) + var(--booki-bleed-current-state-value));
+  /* ... */
+}
+```
+
+Ici, la variable `--_width` n'est accessible que dans le contexte de `#top-level-wrapper` et de ses éléments enfants (principe de _scope_).
+
+J'ai à présent un code CSS qui commence par :
+- Définir des variables globales,
+- Définir des _Tweakers_ qui permettent de m'adapter à la maquette, sans mêler le fond et la forme de mon code,
+- Créer une logique de calcul interne (la notion de _gestion d'états_ sera expliquée plus tard).
+
+Par la suite, mon code comportera la ligne :
+
+```css
+/* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
+```
+
+Cela signifie que **je signale à mon utilisateur que les lignes ci-après du code seront plus techniques : il ne s'agit plus de _Tweakers_ que n'importe qui pourrait venir modifier sans provoquer des comportements à la fois inattendus et difficilement compréhensibles**.  
+
+J'ai donc un code qui respecte une certaine **notion de séparation de configuration et d'implémentation.**
+
+Par la suite, le code deviendra assez classique pour un utilisateur habitué du CSS.
+
+##### Gestion d'états
+
+{{< alert "circle-info" >}}
+Peut-on considérer les _media queries_ comme des _événements_ ?  
+Et peut-on commencer à me rapprocher d'une logique de _gestion d'états_ ?
+{{< /alert >}}
+
+###### Cas d'application dans Booki
+
+La maquette de Booki n'était pas très précise concernant l'œil de designer qu'il fallait lui apporter sur un point.  
+Il était question d'une _largeur maximale de 1400 pixels_. Mais aucun aperçu concret de ce que donne le site sur un écran de 1920 pixels de large par exemple.  
+
+{{< alert "circle-info" >}}
+**Plus flou encore** : selon que l'on regarde la maquette de la version ordinateur, tablette ou mobile, on constate que les marges sur les côtés changent.  
+{{< /alert >}}
+
+<div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
+{{< figure
+    src="./assets/booki-marges-PC.webp"
+    alt="Marges de la version ordinateur, sur la maquette de la page d'accueil de Booki"
+    caption="Mise en évidence des marges de la **version ordinateur** sur la maquette de la page d'accueil de Booki."
+    default=true
+    loading="lazy"
+>}}
+</div>
+
+<div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
+{{< figure
+    src="./assets/booki-marges-tablette.webp"
+    alt="Marges de la version tablette, sur la maquette de la page d'accueil de Booki"
+    caption="Mise en évidence des marges de la **version tablette** sur la maquette de la page d'accueil de Booki."
+    default=true
+    loading="lazy"
+>}}
+</div>
+
+<div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
+{{< figure
+    src="./assets/booki-marges-mobile.webp"
+    alt="Marges de la version smartphone, sur la maquette de la page d'accueil de Booki"
+    caption="Mise en évidence des marges de la **version téléphone** sur la maquette de la page d'accueil de Booki."
+    default=true
+    loading="lazy"
+>}}
+</div>
+
+Ce qui était attendu était de tout simplement laisser les côtés de la page transparents.  
+Finalement, il aurait suffi de bêtement centrer la page et laisser un fond blanc, et l'illusion aurait été suffisante...
+
+{{< alert "circle-info" >}}
+Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !
+[:link: _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/)
+{{< /alert >}}
+
+C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite entre mon intégration des _marges_ et du _fond perdu_ de la page web. À présent, si j'applique un arrière-plan qui n'est pas blanc, je vois de façon évidente que cette spécificité a bien été comprise et appliquée.
+
+<div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
+{{< figure
+    src="./assets/integration-booki-marges-et-fond-perdu.webp"
+    alt="Aperçu des marges et du fond perdu de l'intégration de la page web d'accueil de l'agence de voyage Booki, version ordinateur"
+    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la version ordinateur de la landing page de Booki."
+    default=true
+    loading="lazy"
+>}}
+</div>
+
+###### Implémentation d'une logique de largeur dynamique et de fond perdu
+
+Dans mon pseudo-élément `:root`, je définis ma variable globale `--booki-bleed-current-state-value`, et je lui donne comme valeur initiale : `var(--booki-bleed-desktop)`. Pour rappel : nous sommes sur une intégration en _Desktop First_. 
+
+`var(--booki-bleed-desktop)` vient de devenir la valeur de _fallback_ de `--booki-bleed-current-state-value`.  
+
+À présent, je vais aller modifier cette variable dans mes _breakpoints_.
+
+```css
+/*** D. Breakpoints */
+/* ✨ [§ D.1) Bleed Manager] */
+@media (max-width: 992px) {
+  :root {
+    --booki-bleed-current-state-value: var(--booki-bleed-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --booki-bleed-current-state-value: var(--booki-bleed-mobile);
+  }
+
+  #content>.lodgings-section,
+  #content>.activities,
+  #top-level-wrapper>#header,
+  #top-level-wrapper>#footer {
+    padding: 0;
+  }
+}
+```
 
 ---
 
-:construction: En cours de rédaction, repassez plus tard !
+Et _zouh_ ! :tada:
+
+<div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
+{{< figure
+    src="./assets/booki-agence-voyage-largeur-dynamique-tablette.webp"
+    alt="Aperçu des marges et du fond perdu de l'intégration de la page web d'accueil de l'agence de voyage Booki, version tablette"
+    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la landing page de Booki, version tablette."
+    default=true
+    loading="lazy"
+>}}
+</div>
+
+<div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
+{{< figure
+    src="./assets/booki-agence-voyage-largeur-dynamique-mobile.webp"
+    alt="Aperçu des marges et du fond perdu de l'intégration de la page web d'accueil de l'agence de voyage Booki, version mobile"
+    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la landing page de Booki, version téléphone."
+    default=true
+    loading="lazy"
+>}}
+</div>
+
+##### `.has-tweakers` et le retour de bâton des spécificités de sélecteurs en CSS
+
+Imaginons que j'écrive :
+
+```css
+.filter-button.has-tweakers {
+  /* ... */
+  padding: .9rem 1.2rem .9rem .9rem;
+  /* ... */
+}
+```
+
+Puis que je décide de _monkey patch_ la valeur de cette propriété `padding` plus bas dans mon code...
+
+```css
+@media (min-width: 366px) and (max-width: 495px) {
+  .filter-button {
+    padding: .5rem .8rem .5rem .5rem;
+  }
+}
+```
+
+Et bien : **ça ne fonctionne pas !**  
+`padding` reste à une valeur de `.9rem 1.2rem .9rem .9rem`.
+
+{{< alert "circle-info" >}}
+Nous pouvons retrouver l'origine de ce problème grâce à cet outil.  
+[:link: Calculer la spécificité de ses sélecteurs CSS](https://specificity.keegan.st)
+{{< /alert >}}
+
+<div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
+{{< figure
+    src="./assets/specificite-selecteur-css-epic-fail.webp"
+    alt="Mise en évidence d'une différence de score de spécificité entre deux sélecteurs CSS"
+    caption="`.filter-button.has-tweakers` obtient un meilleur score de spécificité que `.filter-button`, car il chaîne deux noms de classes CSS."
+    default=true
+    loading="lazy"
+>}}
+</div>
+
+{{< alert >}}
+**Cela signifie que les propriétés que l'on écrit dans `.filter-button.has-tweakers` sont prioritaires sur celles que l'on écrit dans `.filter-button` !**  
+Il s'agit d'une particularité dans la logique de Monkey Patch de CSS dont je n'avais pas parlé jusqu'à présent.
+{{< /alert >}}
+
+Aïe...  
+C'est très embêtant.
+
+Mais alors que faire ?
+Également écrire `.filter-button.has-tweakers` dans mes media queries ?  
+
+**Je trouve ce choix très ennuyeux**, car j'aimerais que lorsque je navigue de `.has-tweakers` en `.has-tweakers` dans mon fichier CSS à l'aide du raccourci clavier `CTRL + F`, je ne puisse pas **brutalement changer de contexte de configuration sans m'en rendre compte**.
+
+J'ai donc à la place fait le choix de créer une nouvelle classe, `.enable-tweakers-bypass`.  
+
+Ainsi, je peux à présent patcher **en contournant mon tweaker initial**, de façon explicite dans mon code :
+
+```css
+@media (min-width: 366px) and (max-width: 495px) {
+  .filter-button.enable-tweakers-bypass {
+    padding: .5rem .8rem .5rem .5rem;
+  }
+}
+```
+
+Cependant, **cela induit de devoir polluer mon code HTML avec une classe supplémentaire**.
+
+{{< alert "circle-info" >}}
+Dans un projet dépourvu des contraintes initiales évoquées, **nous aurions pu éviter ces casse-têtes et simplement passer par un _bundler CSS_ afin de pouvoir être tout aussi modulaire, mais sans devoir induire un code aussi inutilement sophistiqué.**
+{{< /alert >}}
+&nbsp;
+{{< alert "circle-info" >}}
+Si vous n'êtes pas sûr d'avoir bien compris la **notion de spécificité en CSS**, cette vidéo de Grafikart vous l'expliquera à merveille.  
+{{< /alert >}}
+
+{{< youtube id="4T4vRdhkCxw" title=" Découverte du CSS (12/31) : La spécificité des sélecteurs" >}}
+
+---
+
+Bravo !  
+Vous avez terminé la lecture de cet article.
+
+Si ce n'est pas déjà fait, vous pouvez regarder le résultat en lançant la démo de ce projet.
+
+{{< alert "circle-info" >}}
+Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
+{{< /alert >}}
+<p align="center">
+&nbsp;
+{{< button href="https://gustavewpm.github.io/OC-Booki/#?" target="_blank">}}
+:point_right: Lancer la démo !
+{{< /button >}}
+</p>
+
+Merci de m'avoir lu !
 
 ---
 
