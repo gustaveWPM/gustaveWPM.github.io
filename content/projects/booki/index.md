@@ -13,7 +13,7 @@ series_order: 1
 {{< lead >}}
 Ce projet peut vous intéresser si **vous commencez en tant que développeur web**, et souhaitez **apprendre les fondamentaux du développpement front-end.**
 
-Tout premier projet du [parcours de développeur web d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web) Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.
+Tout premier projet du [parcours de développeur web d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.
 {{< /lead >}}
 
 {{< alert "circle-info" >}}
@@ -287,7 +287,7 @@ Plus l'on zoome, moins le viewport est large.
 
 **Mais cela signifie aussi que les versions mobile/tablette doivent charger des images plus lourdes, car de meilleure qualité, car celles-ci sont également impactées (négativement) par ce choix, au sacrifice de conserver un bon affichage de la page d'accueil lorsque celle-ci est zoomée sur ordinateur.**  
 
-[:link: Comprendre le Viewport dans le Web mobile](https://www.alsacreations.com/article/lire/1490-Comprendre-le-Viewport-dans-le-Web-mobile.html)
+[:link: Comprendre le Viewport dans le Web mobile](https://www.alsacreations.com/article/lire/1490-Comprendre-le-Viewport-dans-le-Web-mobile.html#?)
 
 {{< alert "circle-info" >}}
 Pourtant, ce serait plutôt l'inverse que l'on chercherait à prioriser : **avoir la page la plus légère possible pour les téléphones**.
@@ -629,7 +629,7 @@ Finalement, il aurait suffi de bêtement centrer la page et laisser un fond blan
 
 {{< alert "circle-info" >}}
 Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !
-[:link: _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/)
+[:link: _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/#?)
 {{< /alert >}}
 
 C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite entre mon intégration des _marges_ et du _fond perdu_ de la page web. À présent, si j'applique un arrière-plan qui n'est pas blanc, je vois de façon évidente que cette spécificité a bien été comprise et appliquée.
@@ -814,9 +814,9 @@ Merci de m'avoir lu !
   - [:link: :us: S'entraîner sur les sélecteurs CSS : _CSS Diner_](https://flukeout.github.io/)
   - [:link: :us: Calculer la spécificité de ses sélecteurs CSS](https://specificity.keegan.st)
   - [:link: :fr: Le modèle de boîte : _CSS Box Model_](https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-  - [:link: :globe_with_meridians: Commencer à utiliser Flexbox : _Flexbox froggy_](https://flexboxfroggy.com/#fr)
-  - [:link: :globe_with_meridians: Commencer à utiliser CSS Grids : _Grid garden_](https://cssgridgarden.com/#fr)
-  - [:link: :us: Se perfectionner en CSS : _CSS Tricks_](https://css-tricks.com)
+  - [:link: :globe_with_meridians: Commencer à utiliser Flexbox : _Flexbox froggy_](https://flexboxfroggy.com/#fr#?)
+  - [:link: :globe_with_meridians: Commencer à utiliser CSS Grids : _Grid garden_](https://cssgridgarden.com/#fr#?)
+  - [:link: :us: Se perfectionner en CSS : _CSS Tricks_](https://css-tricks.com#?)
 
 - Astuces de normalisation CSS
   - [:link: :fr: _Monkey patching_.](https://fr.wikipedia.org/wiki/Monkey-Patch)
@@ -824,11 +824,11 @@ Merci de m'avoir lu !
   - [:link: :us: _CSS variables: Scoping_](https://blog.logrocket.com/css-variables-scoping/)
   - [:link: :us: _How to Override CSS Styles_](https://www.w3docs.com/snippets/css/how-to-override-css-styles.html)
   - [:link: :us: _Delightful ways to write reusable CSS using subclasses_](https://medium.com/insider-inc-engineering/delightful-ways-to-write-reusable-css-using-subclasses-903e90c9cf87)
-  - [:link: :fr: _(Flexbox) min-width: 0 is the new zoom: 1_](https://raphaelgoetter.wordpress.com/2016/11/09/flexbox-min-width-0-is-the-new-zoom-1/)
-  - [:link: :fr: Comprendre le Viewport dans le Web mobile](https://www.alsacreations.com/article/lire/1490-Comprendre-le-Viewport-dans-le-Web-mobile.html)
+  - [:link: :fr: _(Flexbox) min-width: 0 is the new zoom: 1_](https://raphaelgoetter.wordpress.com/2016/11/09/flexbox-min-width-0-is-the-new-zoom-1/#?)
+  - [:link: :fr: Comprendre le Viewport dans le Web mobile](https://www.alsacreations.com/article/lire/1490-Comprendre-le-Viewport-dans-le-Web-mobile.html#?)
 
 - Notions de design
-  - [:link: :us: Fond perdu : _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/)
+  - [:link: :us: Fond perdu : _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/#?)
 
 - Optimisation du chargement des polices
   - [:link: :us: _The Fastest Way To Load Google Fonts In WordPress (Part 2)_](https://metabox.io/load-google-fonts-faster-wordpress/)
