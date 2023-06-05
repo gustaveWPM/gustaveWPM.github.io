@@ -781,7 +781,7 @@ Si vous n'êtes pas sûr d'avoir bien compris la **notion de spécificité en CS
 Bravo !  
 Vous avez terminé la lecture de cet article.
 
-Si ce n'est pas déjà fait, vous pouvez regarder le résultat en lançant la démo de ce projet.
+**Si ce n'est pas déjà fait, vous pouvez voir le résultat en lançant la démo de ce projet.**
 
 {{< alert "circle-info" >}}
 Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
@@ -877,3 +877,19 @@ Merci de m'avoir lu !
 </div>
 
 <p align="center" class="wpm fake-figcaption">Captures d'écran de la <strong>version mobile</strong> de la page d'accueil de Booki que j'ai réalisée.</p>
+
+---
+
+**Si ce n'est pas déjà fait, vous pouvez voir le résultat en lançant la démo de ce projet.**
+
+{{< alert "circle-info" >}}
+Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
+{{< /alert >}}
+<p align="center">
+&nbsp;
+{{< button href="https://gustavewpm.github.io/OC-Booki/#?" target="_blank">}}
+:point_right: Lancer la démo !
+{{< /button >}}
+</p>
+
+---
