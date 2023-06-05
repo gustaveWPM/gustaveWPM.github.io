@@ -5,9 +5,9 @@
 
 {{- if strings.HasPrefix $linkurl "http" -}}
   {{- $targetval = "_blank" -}}
-  {{- $rel = "noopener noreferrer" -}}
+  {{- $rel = "noopener" -}}
   {{- if not (strings.HasSuffix $linkurl $doFollowSuffix) }} 
-    {{- $rel = printf "%s %s" $rel "nofollow" -}}
+    {{- $rel = printf "%s %s" $rel "noreferrer nofollow" -}}
   {{- else -}}
     {{- $linkurl = strings.TrimSuffix $doFollowSuffix $linkurl -}}
   {{- end -}}

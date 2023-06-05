@@ -3,9 +3,9 @@
 {{- $rel := "" -}}
 
 {{- if strings.HasPrefix $href "http" -}}
-  {{- $rel = "noopener noreferrer" -}}
+  {{- $rel = "noopener" -}}
   {{- if not (strings.HasSuffix $href $doFollowSuffix) -}}
-    {{- $rel = printf "%s %s" $rel "nofollow" -}}
+    {{- $rel = printf "%s %s" $rel "noreferrer nofollow" -}}
   {{- else -}}
     {{- $href = strings.TrimSuffix $doFollowSuffix $href -}}
   {{- end -}}

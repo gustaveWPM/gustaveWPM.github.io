@@ -323,7 +323,10 @@ Malgré ce choix, les _Pages speed_ restent très bons à l'heure où j'écris c
 
 Cela est notamment lié au design de la version mobile où **seulement une image est chargée sur téléphone lors du _First Contentful Paint_**.  
 
-Il n'y a pourtant même pas de notion d'optimisation à l'aide de _lazy loading_ sur les images dans ce code. **Ni d'utilisation du _WebP_, et encore moins de _JPEG progressif_**.  
+{{< alert "circle-info" >}}
+Il n'y a pourtant même pas de notion d'optimisation à l'aide de _lazy loading_ sur les images dans ce code.  
+**Et même une utilisation regrettable du _JPEG_, et sans _JPEG progressif_**.  
+{{< /alert >}}
 
 Aucune de ces images ne sont dans le *CSS* sous forme de *background image* : **elles sont bien toutes présentes dans des balises HTML**.
 
@@ -357,24 +360,26 @@ Par exemple :
 </a>
 ```
 
-J'ai donc ainsi obtenu un site **avec des images qui s'affichent constamment en excellente qualité**, peu importe le niveau de zoom sur ordinateur ou que l'on soit sur tablette et ordinateur, **tout en honorant un _Page speed_ tout à fait décent : 98/100 sur ordinateur, 97/100 sur mobile**.  
-
+{{< alert "circle-info" >}}
+J'ai une page **avec des images qui sont constamment en excellente qualité**.  
+**Tout en honorant un _Page speed_ tout à fait décent**.  
 **Sans Javascript ni intelligence d'optimisation particulièrement poussée.**
+{{< /alert >}}
+
+---
 
 #### Concernant le CSS
 
 **Bien qu'HTML et CSS ne soient pas considérés comme des languages de programmation**, et que je ne consacrerai pas mon article de blog à répondre à ce débat : **le CSS est à mon sens un langage tout à fait intéressant et sur lequel on retrouve de la technicité et de l'intelligence dans son écriture**.
 
----
-
 ##### Notions de Monkey patching et de modularisation
 
 Comme on en a plutôt l'habitude en programmation : **le code CSS est lu de haut en bas**.  
+
+{{< alert "circle-info" >}}
 Et tout comme j'en ai également eu l'habitude avec des langages de programmation dits _dynamiques_ : **il est possible de "Patcher" du code CSS en le réécrivant tout ou partie un peu plus bas que là où il a été déclaré pour la première fois.**  
-
-C'est une notion que l'on pourrait qualifier de [:link: _Monkey patching_.](https://fr.wikipedia.org/wiki/Monkey-Patch)
-
----
+[:link: _Monkey patching_.](https://fr.wikipedia.org/wiki/Monkey-Patch)
+{{< /alert >}}
 
 ##### Simple rappel concernant la notion de surchage en CSS
 
@@ -433,7 +438,7 @@ J'aurais donc **seulement cinq couleurs à utiliser sur l'intégralité du desig
 - E : <span style="color:#008ABD; background-color:#000; padding: 5px; border-radius:2px; font-weight:500">#008ABD</span>
 
 J'ai à présent deux possibilités :
-- Écrire partout dans mon code, en dur, `#005270` dès lors que j'ai besoin de la couleur A (**pas bien, pas bien du tout du tout !**)
+- Écrire partout dans mon code, en dur, `#005270` dès lors que j'ai besoin de la couleur A (**pas bien !**)
 - **Créer une variable `primary-color` et lui donner la valeur `#005270`, puis écrire `primary-color`.**
 
 ---

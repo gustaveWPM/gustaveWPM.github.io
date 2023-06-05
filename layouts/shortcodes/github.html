@@ -1,5 +1,5 @@
 {{- $doFollowSuffix := "#?" -}}
-{{- $rel := "noopener noreferrer" -}}
+{{- $rel := "noopener" -}}
 {{- $repo := .Get "repo" -}}
 
 {{- $githubData := getJSON (print "https://api.github.com/repos/" (.Get "repo")) -}}
@@ -8,7 +8,7 @@
 {{- $href := .html_url -}}
 
 {{- if not (strings.HasSuffix $repo $doFollowSuffix) -}}
-  {{- $rel = printf "%s %s" $rel "nofollow" -}}
+  {{- $rel = printf "%s %s" $rel "noreferrer nofollow" -}}
 {{- end -}}
 
 <a target="_blank" class="cursor-pointer"
