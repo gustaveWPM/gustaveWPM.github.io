@@ -1,19 +1,20 @@
-{{- $relval := "" -}}
+{{- $doFollowSuffix := "#?" -}}
 {{- $href := .Get "href" | default "#" -}}
+{{- $rel := "" -}}
 
 {{- if strings.HasPrefix $href "http" -}}
-  {{- $relval = "noopener" -}}
-{{- end -}}
-{{- if strings.HasSuffix $href "#?" -}}
-  {{- $relval = printf "%s %s" $relval "nofollow" -}}
-  {{- $href = strings.TrimSuffix "#?" $href -}}
+  {{- $rel = "noopener noreferrer" -}}
+  {{- if not (strings.HasSuffix $href $doFollowSuffix) -}}
+    {{- $rel = printf "%s %s" $rel "nofollow" -}}
+  {{- else -}}
+    {{- $href = strings.TrimSuffix $doFollowSuffix $href -}}
+  {{- end -}}
 {{- end -}}
 
 <a
   class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
-
   {{- with $href -}}href="{{ . }}"{{- end -}}
-  {{- with $relval -}}rel="{{ . }}"{{- end -}}
+  {{- with $rel -}}rel="{{ . }}"{{- end -}}
   {{- with .Get "target" -}}target="{{ . }}"{{- end -}}
   role="button"
 >

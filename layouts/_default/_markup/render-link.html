@@ -1,19 +1,19 @@
+{{- $doFollowSuffix := "#?" -}}
 {{- $linkurl := .Destination -}}
-{{- $relval := "" -}}
-{{- $targetval := "" -}}
-{{- $classval := "" -}}
+{{- $rel := "" -}}
+{{- $targetval := "_self" -}}
+
 {{- if strings.HasPrefix $linkurl "http" -}}
   {{- $targetval = "_blank" -}}
-  {{- $relval = "noopener" -}}
-  {{- $classval = "wpm external" -}}
-{{- end -}}
-{{- if strings.HasSuffix $linkurl "#?" }} 
-  {{- $relval = printf "%s %s" $relval "nofollow" -}}
-  {{- $linkurl = strings.TrimSuffix "#?" $linkurl -}}
+  {{- $rel = "noopener noreferrer" -}}
+  {{- if not (strings.HasSuffix $linkurl $doFollowSuffix) }} 
+    {{- $rel = printf "%s %s" $rel "nofollow" -}}
+  {{- else -}}
+    {{- $linkurl = strings.TrimSuffix $doFollowSuffix $linkurl -}}
+  {{- end -}}
 {{- end -}}
 <a href="{{ $linkurl | safeURL }}"
   {{- with .Title}} title="{{ trim . " " }}"{{ end -}}
-  {{- with $relval}} rel="{{ trim . " " }}"{{ end -}}
+  {{- with $rel}} rel="{{ trim . " " }}"{{ end -}}
   {{- with $targetval}} target="{{ trim . " " }}"{{ end -}}
-  {{- with $classval}} class="{{ trim . " " }}"{{ end -}}
 >{{ .Text | safeHTML }}</a>
