@@ -24,6 +24,15 @@ Réaliser ce projet permet d'apprendre deux technologies incontournables dans le
 
 # Mon vieux grimoire
 
+<div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
+{{< figure
+    src="./assets/banner-mon-vieux-grimoire-openclassrooms.webp"
+    alt="Bannière de Mon vieux grimoire"
+    default=true
+    loading="lazy"
+>}}
+</div>
+
 ## Résultat du projet
 
 ### Code source (GitHub)
