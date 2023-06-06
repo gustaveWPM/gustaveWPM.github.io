@@ -1,17 +1,15 @@
 title = "GustaveWPM"
-description = "Découvrez mes projets et mon blog de développeur web grâce auquel je partage ma passion ! Exemples de technologies utilisées : React, TypeScript, ExpressJS, Hugo..."
-languageCode = "fr"
-languageName = "Français"
-isoCode = "fr"
-weight = 1
-rtl = false
 
-logo = "/img/wpm-logo.webp"
-# copyright = "Copy, _right?_ :thinking_face:"
-
-displayName = "FR"
-dateFormat = "2 January 2006"
-
+[params]
+  description = "Découvrez mes projets et mon blog de développeur web grâce auquel je partage ma passion ! Exemples de technologies utilisées : React, TypeScript, ExpressJS, Hugo..."
+  languageCode = "fr"
+  languageName = "Français"
+  isoCode = "fr"
+  weight = 1
+  rtl = false
+  logo = "/img/wpm-logo.webp"
+  displayName = "FR"
+  dateFormat = "2 January 2006"
 
 [author]
   name = "Gustave"
