@@ -431,15 +431,15 @@ Imaginons que l'on parte sur le nuancier suivant :
 </div>
 
 J'aurais donc **seulement cinq couleurs à utiliser sur l'intégralité du design d'un produit :**
-- A : <span style="color:#005270; background-color:#000; padding: 5px; border-radius:2px; font-weight:500">#005270</span>
-- B : <span style="color:#49C5F2; background-color:#000; padding: 5px; border-radius:2px; font-weight:500">#49C5F2</span>
-- C : <span style="color:#00B0F0; background-color:#000; padding: 5px; border-radius:2px; font-weight:500">#00B0F0</span>
-- D : <span style="color:#225B70; background-color:#000; padding: 5px; border-radius:2px; font-weight:500">#225B70</span>
-- E : <span style="color:#008ABD; background-color:#000; padding: 5px; border-radius:2px; font-weight:500">#008ABD</span>
+- A : {{< wpm-hexacolor hex="#005270" >}}
+- B : {{< wpm-hexacolor hex="#49C5F2" >}}
+- C : {{< wpm-hexacolor hex="#00B0F0" >}}
+- D : {{< wpm-hexacolor hex="#225B70" >}}
+- E : {{< wpm-hexacolor hex="#008ABD" >}}
 
 J'ai à présent deux possibilités :
-- Écrire partout dans mon code, en dur, `#005270` dès lors que j'ai besoin de la couleur A (**pas bien !**)
-- **Créer une variable `primary-color` et lui donner la valeur `#005270`, puis écrire `primary-color`.**
+- Écrire partout dans mon code, en dur, {{< wpm-hexacolor hex="#005270" >}} dès lors que j'ai besoin de la couleur A (**pas bien !**)
+- **Créer une variable `--primary-color` et lui donner la valeur {{< wpm-hexacolor hex="#005270" >}}, puis écrire `var(--primary-color)`.**
 
 ---
 

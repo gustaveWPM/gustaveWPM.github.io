@@ -1,3 +1,27 @@
+/* Ugly patch for pagespeed accessibility tab concerns, inspired by .visually-hidden from Bootstrap */
+.main-menu div > nav > a[href="https://github.com/gustaveWPM"] > p {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.wpm.color-preview {
+  background-color:#000;
+  padding: 5px;
+  border-radius:2px;
+  font-weight:500
+}
+
+.wpm.color-preview.dark-color-preview {
+  background-color:#fff;
+}
+
 .wpm.site-author-links-wrapper {
   margin-bottom: 0
 }

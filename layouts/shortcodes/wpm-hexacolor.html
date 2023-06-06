@@ -1,0 +1,12 @@
+{{- $mode := .Get "mode" -}}
+{{- if not $mode -}}
+  {{- with .Get "hex" -}}
+    <span style="color:{{ . }};" class="wpm color-preview">{{ . }}</span>
+  {{- end -}}
+{{- else -}}
+  {{- if eq $mode "light" -}}
+    {{- with .Get "hex" -}}
+      <span style="color:{{ . }};" class="wpm color-preview dark-color-preview">{{ . }}</span>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

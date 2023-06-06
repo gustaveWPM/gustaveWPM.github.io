@@ -1,5 +1,5 @@
 {{- $id := .Get "id" -}}
-{{- if (not (.Get "id")) -}}
+{{- if not $id -}}
 {{- $id = .Get 0 -}}
 {{- end -}}
 
