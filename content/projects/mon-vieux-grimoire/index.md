@@ -272,55 +272,31 @@ Si vous jetez un œil au [:link: fichier app.ts](https://github.com/gustaveWPM/O
 
 #### Créer des entités
 
----
-
-:construction: En cours de rédaction, repassez plus tard !
-
----
+{{< wpm-wip >}}
 
 #### Créer des contrôleurs
 
----
-
-:construction: En cours de rédaction, repassez plus tard !
-
----
+{{< wpm-wip >}}
 
 ## Services
 
 ### Sécuriser les mots de passe
 
----
-
-:construction: En cours de rédaction, repassez plus tard !
-
----
+{{< wpm-wip >}}
 
 ### Sécuriser son CRUD
 
----
-
-:construction: En cours de rédaction, repassez plus tard !
-
----
+{{< wpm-wip >}}
 
 ## Pentest avec Burp Suite
 
 ### Tester son API
 
----
-
-:construction: En cours de rédaction, repassez plus tard
-
----
+{{< wpm-wip >}}
 
 ### Tout casser
 
----
-
-:construction: En cours de rédaction, repassez plus tard
-
----
+{{< wpm-wip >}}
 
 ---
 
@@ -334,8 +310,4 @@ Si vous jetez un œil au [:link: fichier app.ts](https://github.com/gustaveWPM/O
 **Si vous êtes dév : il y a aussi quelques liens en bonus pour vous.**
 {{< /alert >}}
 
----
-
-:construction: En cours de rédaction, repassez plus tard
-
----
+{{< wpm-wip >}}
