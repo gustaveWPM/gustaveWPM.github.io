@@ -73,56 +73,10 @@ Avant de commencer à travailler, je vous recommande de comprendre (dans les gra
 
 **Pour ce projet, je vous recommanderais d'utiliser [:link: Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) pour automatiquement formater votre code.**  
 
-Si vous souhaitez me copier, vous pouvez utiliser les mêmes fichiers de configuration que moi.
-
-J'ai créé un dossier `.vscode` à la racine de mon dossier de travail, ainsi qu'un fichier `.prettierrc`.
-
-Mon fichier `.prettierrc` :
-
-```json
-{
-  "singleQuote": true,
-  "printWidth": 150,
-  "proseWrap": "always",
-  "tabWidth": 2,
-  "useTabs": false,
-  "trailingComma": "none",
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "semi": true
-}
-```
-
-Mon fichier ̀.vscode/extensions.json` :
-
-```json
-{
-  "recommendations": ["esbenp.prettier-vscode"]
-}
-```
-
-Mon fichier `.vscode/settings.json` :
-
-```json
-{
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.wordWrap": "on",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  }
-}
-```
-
-N'oubliez pas de modifier ou créer votre fichier `.gitignore`, dans le même dossier que votre fichier `.prettierrc`, et d'y ajouter ces règles :
-
-```yaml
-.vscode/*
-!.vscode/settings.json
-!.vscode/extensions.json
-```
+{{< alert "circle-info" >}}
+Si vous souhaitez me copier, **vous pouvez utiliser les mêmes fichiers de configuration _Prettier_ et _VSCode_ que moi.**  
+[:link: Ma configuration Prettier]({{< ref "quirks/prettier" >}}#?)
+{{< /alert >}}
 
 **Pour la suite, vous pouvez également vous épauler d'une IA :**
 - [:link: ChatGPT,](https://chat.openai.com)
@@ -153,11 +107,13 @@ Voici deux des nombreux points qui font de _TypeScript_ un choix beaucoup plus i
 
 ### Rappels des contraintes (arbitraires) de l'exercice
 
-**Une fois qu'un livre a été noté par un utilisateur, il ne devient plus possible de changer la note de ce dernier.**  
+- **Une fois qu'un livre a été noté par un utilisateur, il ne devient plus possible de changer la note de ce dernier**,
+- **La note d'un livre ne peut aller que de 0 à 5.**
+
 Nous sécuriserons notre back-end en conséquence.  
 
-Autre contrainte : le backend doit impérativement se lancer sur le port 4000 de la machine.  
-Le front-end fournit a été codé pour communiquer sur le port 4000.
+Autre contrainte : le backend doit impérativement se lancer sur le port `4000` de la machine.  
+Le front-end fournit a été codé pour communiquer sur le port `4000`.
 
 #### Lancer un serveur ExpressJS
 
@@ -209,7 +165,7 @@ export namespace ServerConfig {
 export default ServerConfig;
 ```
 
-Le port 4000 est imposé par ce projet.  
+Le port `4000` est imposé par ce projet.  
 
 Le dossier `images/` est quant à lui présent au chemin `backend/images`.  
 Mais mon fichier `app.ts` est quant à lui présent au chemin `backend/src/app`.
@@ -271,7 +227,11 @@ export async function getApp(): Promise<Express> {
 
 Si vous jetez un œil au [:link: fichier app.ts](https://github.com/gustaveWPM/OC-Mon-Vieux-Grimoire/blob/main/backend/src/app/app.ts) de mon projet, vous constaterez qu'il est extrêmement court. Il n'y a effectivement rien besoin de plus pour lancer un serveur ExpressJS.
 
+{{< alert >}}
 **Si vous voyez du code inutilement compliqué pour faire strictement la même chose, c'est tout simplement qu'il n'est pas à jour.**
+{{< /alert >}}
+
+---
 
 **Pour des raisons _Legacy_ qui me sont propres**, j'ai fait le choix d'intégrer à la fois le _middleware_ pour pouvoir parser le _body_ de mes requêtes API en tant que _JSON_ ou en tant qu'_URL Encoded_.  
 
@@ -281,7 +241,73 @@ Si vous jetez un œil au [:link: fichier app.ts](https://github.com/gustaveWPM/O
 
 #### Créer des entités
 
-{{< wpm-wip >}}
+_Mongoose_ est un _ORM_ qui permet de définir des _schémas_.
+
+Par exemple :
+
+```ts
+import { Document, Schema, model } from 'mongoose';
+import uniqueValidator from 'mongoose-unique-validator';
+
+export interface UserDocument extends Document {
+  email: string;
+  password: string;
+}
+
+const userSchema: Schema = new Schema({
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true }
+});
+
+userSchema.plugin(uniqueValidator);
+userSchema.index({ email: 'text' });
+
+export default model<UserDocument>('User', userSchema);
+```
+
+Ce code est très simple à comprendre, et c'est toute la force de _Mongoose_.  
+La seule subtilité à noter ici est **l'utilisation d'un _index_ sur le champ "email".** Cela permet de s'assurer que **la recherche en base de données d'un utilisateur grâce à son adresse email restera toujours rapide.**  
+
+{{< alert >}}
+Faites néanmoins attention avec les indexs de type `text`, car **ceux-ci peuvent devenir volumineux avec le nombre croissant de nouvelles entrées en base de données**.
+{{< /alert >}}
+
+##### Rajouter des contraintes sur nos entités
+
+Les schémas _Mongoose_ ne sont pas juste des substituts à un typage que l'on ferait avec une simple interface _TypeScript_ (ici `UserDocument`).  
+
+Je souhaiterais attirer l'attention sur deux propriétés des objets _Mongoose_ dans le cadre de ce projet :
+
+- `min` et `max` permettent de définir une valeur minimale et maximale à un nombre (**intéressant pour notre système de notation de 0 à 5**),
+- `validate` permet de mettre en place une logique de validation du champ (**extrêmement intéressant pour tous les petits cas épineux**).
+
+À titre d'exemple, nous allons ici sécuriser les manipulations des _emails_ dans notre back-end.  
+Il vous appartiendra de réfléchir à comment sécuriser les autres champs, bien que nous détaillerons aussi le cas de `year` en raison du fait qu'il s'agit d'un autre cas intéressant à creuser.
+
+{{< alert "circle-info" >}}
+L'avantage d'imposer des contraintes directement dans un modèle _Mongoose_ est que cela nous permettra **d'éviter de potentielles erreurs d'inattention** : il s'agit d'une vérification que l'on **délègue à l'_ORM_**, et donc à un **plus haut niveau d'abstraction**. Ce n'est pas une garantie absolue de sécurité, mais cela reste **une façon de faire que vous devriez privilégier dès lors que c'est possible**.
+{{< /alert >}}
+
+```ts
+const userSchema: Schema = new Schema({
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    validate: {
+      validator: emailValidator,
+      message: emailValidatorMsg
+    }
+  },
+
+  password: { type: String, required: true }
+});
+```
+
+{{< alert >}}
+Concernant les mots de passe : ils seront déjà validés, puis hashés, avant d'être transmis à Mongoose. **Il s'agit d'une fonctionnalité critique et l'utilisation d'un _hook_ de _Mongoose_ me paraissait trop _unsafe_.**  
+Exceptionnellement, **j'ai préféré redescendre d'un niveau d'abstraction.**
+{{< /alert >}}
 
 #### Créer des contrôleurs
 
