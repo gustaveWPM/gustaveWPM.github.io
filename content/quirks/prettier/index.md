@@ -13,7 +13,7 @@ slug: "ma-configuration-prettier-pour-visual-studio-code"
 {{< /lead >}}
 
 {{< alert "circle-info" >}}
-Bien que cet article ne couvre en priorité VSCode, **vous n'aurez pas grand chose à modifier pour vous en sortir si vous utilisez un autre IDE/éditeur de code.**
+Bien que cet article couvre en priorité VSCode, **vous n'aurez pas grand chose à modifier pour vous en sortir si vous utilisez un autre IDE/éditeur de code.**
 {{< /alert >}}
 
 ---
