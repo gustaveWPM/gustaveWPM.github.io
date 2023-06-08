@@ -23,7 +23,7 @@ Faisons un **système d'inscription et d'authentification sécurisés**, puis un
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
 {{< figure
-    src="./assets/oc-web-dev-bootcamp-projects-banners/mon-vieux-grimoire-openclassrooms.webp"
+    src="/img/oc-web-dev-bootcamp-projects-banners/mon-vieux-grimoire-openclassrooms.webp"
     alt="Bannière de Mon vieux grimoire"
     default=true
     loading="lazy"
@@ -52,7 +52,7 @@ Compte tenu du fait qu'il s'agit d'un projet **qu'il faudrait que je surveille e
 ## Pistes pour la réalisation du projet
 
 {{< alert >}}
-**Je n'avais jamais écrit d'ExpressJS, ni utilisé Mongoose avant de me lancer.**  
+**Je n'avais jamais écrit d'ExpressJS, ni utilisé _Mongoose_ avant de me lancer.**  
 Néanmoins, je n'ai rien réalisé d'expérimental dans ce projet. 
 {{< /alert >}}
 
@@ -292,8 +292,8 @@ const userSchema: Schema = new Schema({
     required: true,
     unique: true,
     validate: {
-      validator: emailValidator,
-      message: emailValidatorMsg
+      validator: myEmailValidator,
+      message: "Adresse email invalide: {VALUE} n'est pas une adresse email valide. Soit l'adresse email que vous avez entrée n'est pas une adresse email correcte, soit votre fournisseur d'adresse email est bloqué par notre système."
     }
   },
 
@@ -301,20 +301,211 @@ const userSchema: Schema = new Schema({
 });
 ```
 
+Pour ce qui est de la fonction `myEmailValidator`, celle-ci ne peut prendre qu'un seul et unique argument (qui sera la valeur à valider).  
+
+On peut partir sur quelque chose d'assez simple :
+
+```ts
+import { validate as emailValidator } from 'email-validator';
+
+function isLowerCase(input: string): boolean {
+  for (let i = 0; input[i]; i++) {
+    if (input[i] !== input[i].toLowerCase()) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function myEmailValidator(inputEmail: string): boolean {
+  if (!isLowerCase(inputEmail)) {
+    return false;
+  }
+
+  const isValid = emailValidator(inputEmail);
+  return isValid;
+}
+```
+
+J'en profite pour me forcer à ce que l'adresse email soit envoyée tout en minuscules à _Mongoose_, et ce pour être sûr que je ne ferai jamais l'erreur d'oublier un appel à `.toLowerCase()` sur les adresses emails que je dois enregistrer en base de données. **En effet, pour s'assurer au maximum de l'unicité des adresses emails, autant toujours les enregistrer sans aucun caractère majuscule pour les « Normaliser ».**
+
 {{< alert >}}
-Concernant les mots de passe : ils seront déjà validés, puis hashés, avant d'être transmis à Mongoose. **Il s'agit d'une fonctionnalité critique et l'utilisation d'un _hook_ de _Mongoose_ me paraissait trop _unsafe_.**  
-Exceptionnellement, **j'ai préféré redescendre d'un niveau d'abstraction.**
+Concernant les mots de passe : ils seront déjà validés, puis hashés, avant d'être transmis à _Mongoose_. **Il s'agit d'une fonctionnalité critique et l'utilisation d'un _hook_ de _Mongoose_ me paraissait trop _unsafe_ (et non standard).**  
+**Pour des raisons de portabilité**, j'ai préféré redescendre d'un niveau d'abstraction.
 {{< /alert >}}
-
-#### Créer des contrôleurs
-
-{{< wpm-wip >}}
 
 ## Services
 
 ### Sécuriser les mots de passe
 
-{{< wpm-wip >}}
+Afin de sécuriser les mots de passe, nous allons faire deux choses :
+- **Auditer le mot de passe choisi par l'utilisateur** pour le valider ou le rejeter (afin d'éliminer `1234`, `abcabcabc`...)
+- **Hasher le mot de passe avant de le stocker en base de données**
+
+#### Audit du mot de passe
+
+Commençons par créer un _middleware_ pour **isoler la logique d'audit de mot de passe et la rendre réutilisable.**
+
+```ts
+import { NextFunction, Request, Response } from 'express';
+// import zxcvbn, { ... } from 'zxcvbn';
+
+function buildAndThrowFailedPasswordAuditErrorMsg(passwordAudit: Partial<ZXCVBNResult>) {
+  let errorMsg = Config.TOO_SHORT_PASSWORD_ERROR;
+
+  const feedback = (passwordAudit as ZXCVBNResult).feedback;
+  if (!feedback) {
+    throw new Error(errorMsg);
+  }
+
+  if (feedback.warning && feedback.warning.length > 0) {
+    errorMsg += '\n';
+    errorMsg += `ZXCVBN Feedback warning: ${feedback.warning}`;
+  }
+
+  if (feedback.suggestions && feedback.suggestions.length > 0) {
+    errorMsg += '\n';
+    errorMsg += `ZXCVBN Feedback suggestions: ${feedback.suggestions.join('\n')}\n`;
+  }
+
+  throw new Error(errorMsg);
+}
+
+function getPasswordAuditResult(inputPassword: string): Partial<ZXCVBNResult> {
+  const notApprovedPasswordDefaultAuditValues = { score: 0 as ZXCVBNScore };
+  if (inputPassword.length < Config.MIN_PASSWORD_LEN || inputPassword.length > Config.MAX_PASSWORD_LEN) {
+    return notApprovedPasswordDefaultAuditValues;
+  }
+
+  const uniqCharsSet = new Set(inputPassword);
+  if (uniqCharsSet.size < Config.MIN_PASSWORD_DIFFERENT_CHARS) {
+    return notApprovedPasswordDefaultAuditValues;
+  }
+
+  let inputPasswordToTest = inputPassword;
+  if (inputPassword.startsWith(PasswordsConfig.PASSWORD_EXAMPLE)) {
+    inputPasswordToTest = inputPassword.substring(PasswordsConfig.PASSWORD_EXAMPLE.length);
+  }
+
+  const passwordAudit = zxcvbn(password);
+  return passwordAudit;
+}
+
+export function auditPassword(req: Request, res: Response, next: NextFunction) {
+  try {
+    const { email, password: givenPassword } = req.body;
+    const formattedEmail = tryToFormatEmail(email); // * ... Ma fonction interne qui va appliquer .trim().toLowerCase()
+
+    const passwordAudit: Partial<ZXCVBNResult> = getPasswordAuditResult(givenPassword);
+    if ((passwordAudit.score as ZXCVBNScore) < PasswordsConfig.MIN_ZXCVBN_SCORE) { // * ... Dans mon cas, MIN_ZXCVBN_SCORE vaut 3
+      buildAndThrowFailedPasswordAuditErrorMsg(passwordAudit);
+    }
+
+    next();
+  } catch (error) {
+    printError(error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(errorToObj(error));
+  }
+}
+
+export default auditPassword;
+```
+
+**[:link: ZXCVBN](https://github.com/dropbox/zxcvbn) est une superbe librairie pour vérifier la qualité d'un choix de mot de passe**, que je vous conseille d'aller découvrir un peu plus en détails.  
+Cette librairie standardise un **score de sécurité allant de 1 à 4**, et donne même **des conseils pour améliorer un mot de passe** lorsqu'il est détecté comme insuffisamment sécurisé.
+
+#### Hash du mot de passe
+
+Continuons avec un _middleware_ qui nous permettra d'**hasher le mot de passe.**
+
+```ts
+import { NextFunction, Request, Response } from 'express';
+// import ServerConfig from '...';
+
+const HASH_N = 10;
+
+export async function hashPassword(req: Request, res: Response, next: NextFunction) {
+  try {
+    const { password: givenPassword } = req.body;
+    const hashedPassword = await bcrypt.hash(givenPassword, HASH_N);
+
+    if (!hashedPassword) {
+      throw new Error(ServerConfig.UNKNOWN_ERROR);
+    }
+    req.body.password = hashedPassword;
+    next();
+  } catch (error) {
+    printError(error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(errorToObj(error));
+  }
+}
+```
+
+C'est aussi simple que ça. :tada:
+
+---
+
+Nous finirons enfin par un dernier middleware qui s'occupera de **l'enregistrement en base de données** du nouveau membre :
+```ts
+// import {...}
+
+export async function userSignup(req: Request, res: Response) {
+  try {
+    const { email: formattedEmail, password: hashedPassword } = req.body;
+    const user = new User({
+      email: formattedEmail,
+      password: hashedPassword
+    });
+
+    await user.save();
+    res.status(StatusCodes.CREATED).json({ message: 'Utilisateur créé' });
+  } catch (error) {
+    printError(error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(errorToObj(error));
+  }
+}
+```
+
+---
+
+## Créer un contrôleur
+
+```ts
+import express, { Router } from 'express';
+import { userLogin } from '../services/User';
+
+import auditPassword from '../middlewares/usersManager/auditPassword';
+import hashPassword from '../middlewares/usersManager/hashPassword';
+import userSignup from '../middlewares/usersManager/userSignup';
+
+const usersController: Router = express.Router();
+
+usersController.post('/signup', auditPassword, hashPassword, userSignup);
+// usersController.post('/login', userLogin);
+
+export default usersController;
+```
+
+On observe ici la chaîne de _middlewares_ :
+- `auditPassword`
+  - `hashPassword`
+    - `userSignup`
+
+Cette chaîne a l'avantage d'être **très élégante et très modulable**.  
+Ainsi, lorsqu'il faudrait rajouter une logique de changement de mot de passe, nous n'aurions qu'à faire :
+- `auditPassword`
+  - `hashPassword`
+    - `userUpdate`
+
+C'est pour cela que je souhaitais attirer votre attention là-dessus.  
+Je pense qu'il s'agit d'un bon premier exemple afin de comprendre comment bien structurer ses _middlewares_ : **évitez le plus possible les monolithes**.  
+
+À la place : **codez de petits middlewares indépendants, qui effectuent chacun leurs vérifications en interne afin de pouvoir les réutiliser de façon sécurisée n'importe où dans votre code.**
+
+{{< alert >}}
+**Ne partez jamais du principe qu'un _middleware_ sera forcément appelé après un autre, et donc de vous autoriser à omettre des vérifications.**  
+Considérez chacun de vos _middlewares_ comme étant **autonome** !
+{{< /alert >}}
 
 ### Sécuriser son CRUD
 
