@@ -12,9 +12,9 @@ series_order: 6
 ---
 
 {{< lead >}}
-Avant dernier projet du [**parcours de développeur web** d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Mon vieux grimoire consiste en **la réalisation d'un backend d'un site de notations de livres**.  
+Avant dernier projet du [**parcours de développeur web** d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Mon vieux grimoire consiste en **la réalisation d'un CRUD**.  
 
-Faisons un système d'inscription et d'authentification sécurisés, puis un système d'ajouts de fiches produits, et enfin des _pentests_ sur notre _API_ !
+Faisons un **système d'inscription et d'authentification sécurisés**, puis un **système de création, lecture, modification et suppression de fiches produits**, et enfin des **_pentests_ sur notre _API_ !**
 {{< /lead >}}
 
 ---
