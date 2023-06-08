@@ -30,7 +30,7 @@ Réaliser ce projet permet d'apprendre les deux langages incontournables dans le
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
 {{< figure
-    src="./assets/banner-booki-openclassrooms.webp"
+    src="/img/banner-booki-openclassrooms.webp"
     alt="Bannière de Booki"
     default=true
     loading="lazy"
