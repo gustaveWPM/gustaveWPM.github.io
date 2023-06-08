@@ -23,7 +23,7 @@ Faisons un **système d'inscription et d'authentification sécurisés**, puis un
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
 {{< figure
-    src="./assets/banner-mon-vieux-grimoire-openclassrooms.webp"
+    src="./assets/oc-web-dev-bootcamp-projects-banners/mon-vieux-grimoire-openclassrooms.webp"
     alt="Bannière de Mon vieux grimoire"
     default=true
     loading="lazy"

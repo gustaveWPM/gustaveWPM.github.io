@@ -22,7 +22,7 @@ Ce projet avait pour objectif d'**intégrer une interface de site web avec du co
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
 {{< figure
-    src="/img/banner-booki-openclassrooms.webp"
+    src="/img/oc-web-dev-bootcamp-projects-banners/booki-openclassrooms.webp"
     alt="Bannière de Booki"
     default=true
     loading="lazy"
