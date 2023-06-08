@@ -10,15 +10,12 @@ series_order: 1
 ---
 
 ---
+
 {{< lead >}}
-Ce projet peut vous intéresser si **vous commencez en tant que développeur web**, et souhaitez **apprendre les fondamentaux du développpement front-end.**
+Tout premier projet du [**parcours de développeur web** d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.  
 
-Tout premier projet du [parcours de développeur web d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.
+C'est l'occasion parfaite de commencer à créer des pages web et apprendre des notions comme le HTML sémantique, ou encore les variables et sélecteurs CSS !
 {{< /lead >}}
-
-{{< alert "circle-info" >}}
-Réaliser ce projet permet d'apprendre les deux langages incontournables dans le web design : **HTML et CSS**.
-{{< /alert >}}
 
 ---
 

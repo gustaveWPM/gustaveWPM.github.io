@@ -8,6 +8,7 @@ slug: "ma-configuration-prettier-pour-visual-studio-code"
 ---
 
 ---
+
 {{< lead >}}
 **Si vous souhaitez me copier, vous pouvez utiliser les mêmes fichiers de configuration que moi.**
 {{< /lead >}}

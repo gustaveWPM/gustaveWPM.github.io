@@ -10,15 +10,12 @@ series_order: 6
 ---
 
 ---
+
 {{< lead >}}
-Ce projet peut vous intéresser si **vous commencez en tant que développeur web**, et souhaitez **apprendre les fondamentaux du développpement back-end.**
+Avant dernier projet du [**parcours de développeur web** d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Mon vieux grimoire consiste en **la réalisation d'un backend d'un site de notations de livres**.  
 
-Avant dernier projet du [parcours de développeur web d'_OpenClassrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Mon vieux grimoire consiste en **la réalisation d'un backend d'un site de notations de livres**.
+Faisons un système d'inscription et d'authentification sécurisés, puis un système d'ajouts de fiches produits, et enfin des _pentests_ sur notre _API_ !
 {{< /lead >}}
-
-{{< alert "circle-info" >}}
-Réaliser ce projet permet d'apprendre deux technologies incontournables dans le back-end : **_TypeScript_ et un ORM** (Mongoose, en l'occurrence).
-{{< /alert >}}
 
 ---
 
