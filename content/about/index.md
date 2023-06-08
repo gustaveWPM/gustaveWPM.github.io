@@ -45,6 +45,7 @@ layout: "simple"
             métier</strong> d'une application.</p>
         <p>Il en va de même pour les <strong>tâches d'intégration</strong> et d'<strong>implémentation de fonctionnalités</strong> côté <em>Front</em>.
         </p>
+        <p><strong>Ma formation chez <em>OpenClassrooms</em> a contribué à renforcer ma persévérance et mon autonomie.</strong> Durant mes projets, j'ai pu appréhender diverses situations avec l'approche de <strong>choisir et créer des solutions personnalisées</strong> en partant de l'existant : <strong>spécifications, maquettes, <em>users stories</em></strong>...</p>
       </div>
     </div>
     <div
@@ -56,6 +57,7 @@ layout: "simple"
             apprendre et travailler avec <em>VueJS</em></strong>.</p>
         <p><strong>J'aspire à contribuer à des projets stimulants, et voudrais avoir la chance de travailler auprès de
             <em>Leads</em> talentueux.</strong></p>
+        <p>Je souhaite pouvoir <strong>participer activement.</strong> Obtenir un espace de liberté et d'autonomie dans lequel je peux <strong>contribuer tout en étant force de proposition. En exploitant au maximum mon envie de bien faire et de toujours progresser.</strong></p>
       </div>
     </div>
     <a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
