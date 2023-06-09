@@ -9,7 +9,7 @@ layout: "simple"
 ---
 
 <div align="center">
-  <img class="rounded-md" src="./assets/gustave-le-hibou.webp" alt="GustaveWPM le hibou" />
+  <img class="w-full rounded-lg single_hero_round" alt="Gustave le hibou" src="./assets/gustavewpm-le-hibou.webp" width="1200" height="630">
   <section class="w-full grid gap-4 grid-cols-1">
     <div
       class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
