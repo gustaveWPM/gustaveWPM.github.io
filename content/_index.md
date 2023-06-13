@@ -1,5 +1,5 @@
 ---
-title: "Page d’accueil"
+title: "Développement web, articles de blog"
 description: "Découvrez mes projets et mon blog de développeur web grâce auquel je partage ma passion ! Exemples de technologies utilisées : React, TypeScript, ExpressJS, Hugo..."
 images:
   - /og/homepage.jpg
