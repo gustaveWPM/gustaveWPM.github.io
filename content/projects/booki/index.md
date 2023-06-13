@@ -86,14 +86,14 @@ Avant de commencer à travailler, je vous recommande de comprendre (dans les gra
 
 Comme vous le constaterez, _l'indentation_ (espaces en début de ligne) est un sujet qui revient en permanence avec le HTML.  
 
-**Pour ce projet, vous n'aurez pas particulièrement besoin d'extensions particulières dans votre éditeur de code.**  
+**Pour ce projet, vous n'aurez pas besoin d'extensions particulières dans votre éditeur de code.**  
 
 Je vous recommande juste de vous assurer que votre *formatter* fonctionne correctement afin de pouvoir rapidement **indenter automatiquement** votre code.
 
 {{< alert "circle-info" >}}
 Dans VS Code, utilisez la combinaison de touches suivante :  
-`CTRL + Shift + P`\*, puis appelez la commande `Format Document`.  
-_\* Le raccourci clavier sera `Commande + Shift + P` sur Mac._
+`CTRL+Shift+P`\*, puis appelez la commande `Format Document`.  
+_\* Le raccourci clavier sera `Cmd+Shift+P` sur Mac._
 {{< /alert >}}
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
@@ -105,6 +105,17 @@ _\* Le raccourci clavier sera `Commande + Shift + P` sur Mac._
     loading="lazy"
 >}}
 </div>
+
+{{< alert "circle-info" >}}
+Pour que cela se fasse automatiquement, vous pouvez activer l'option _Format on Save_ de VSCode.
+{{< /alert >}}
+
+---
+
+_Et si vous souhaitez utiliser un autre formatter que celui de VSCode..._  
+[:link: Ma configuration Prettier]({{< ref "quirks/prettier" >}}#?)
+
+---
 
 **Vous pouvez également vous épauler d'une IA :**
 - [:link: ChatGPT,](https://chat.openai.com)
@@ -321,8 +332,8 @@ Malgré ce choix, les _Pages speed_ restent très bons à l'heure où j'écris c
 Cela est notamment lié au design de la version mobile où **seulement une image est chargée sur téléphone lors du _First Contentful Paint_**.  
 
 {{< alert "circle-info" >}}
-Il n'y a pourtant même pas de notion d'optimisation à l'aide de _lazy loading_ sur les images dans ce code.  
-**Et même une utilisation regrettable du _JPEG_, et sans _JPEG progressif_**.  
+**Les images ont été passées du _JPEG_ au _WEBP_, et le logo du _PNG_ au _SVG_.**  
+En l'occurrence, cela n'a pas changé grand chose aux indicateurs.
 {{< /alert >}}
 
 Aucune de ces images ne sont dans le *CSS* sous forme de *background image* : **elles sont bien toutes présentes dans des balises HTML**.
