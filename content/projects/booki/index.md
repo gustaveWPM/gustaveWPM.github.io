@@ -390,7 +390,7 @@ J'ai une page **avec des images qui sont constamment en excellente qualité**.
 
 #### Concernant le CSS
 
-**Bien qu'HTML et CSS ne soient pas considérés comme des languages de programmation**, et que je ne consacrerai pas mon article de blog à répondre à ce débat : **le CSS est à mon sens un langage tout à fait intéressant et sur lequel on retrouve de la technicité et de l'intelligence dans son écriture**.
+**Bien qu'HTML et CSS ne soient pas considérés comme des langages de programmation**, et que je ne consacrerai pas mon article de blog à répondre à ce débat : **le CSS est à mon sens un langage tout à fait intéressant et sur lequel on retrouve de la technicité et de l'intelligence dans son écriture**.
 
 ##### Notions de Monkey patching et de modularisation
 

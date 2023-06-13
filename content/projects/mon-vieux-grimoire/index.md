@@ -66,7 +66,7 @@ Avant de commencer à travailler, je vous recommande de comprendre (dans les gra
 [:down_arrow: Vous trouverez en annexe une sélection de ressources pédagogiques](#liens-externes)
 {{< /alert >}}
 
-#### Avant de se lancer...
+### Avant de se lancer...
 
 **Pour ce projet, je vous recommanderais d'utiliser [:link: Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) pour automatiquement formater votre code.**  
 
@@ -91,18 +91,30 @@ N'hésitez pas à demander à votre agent conversationnel de reformuler sa répo
 _(Ça se passe de commentaires...)_
 {{< /alert >}}
 
-##### Faites du _TypeScript_ !
+#### Faites du _TypeScript_ !
 
 Voici deux des nombreux points qui font de _TypeScript_ un choix beaucoup plus intelligent que du _JavaScript_, surtout pour un projet de backend **qui se doit d'avoir une sécurité accrue** :
 - _TypeScript_ **détecte les erreurs de typage lors de sa compilation**,
 - _TypeScript_ **permet à votre éditeur de code d'être plus intelligent.**
 
+{{< alert "circle-info" >}}
+**La formation de Grafikart est excellente pour apprendre le _TypeScript_.**  
+[:link: Apprendre TypeScript](https://www.youtube.com/watch?v=ffCIANfx_-0&list=PLjwdMgw5TTLX1tQ1qDNHTsy_lrkCt4VW3)
+{{< /alert >}}
+
+Sachez aussi que vous pouvez y aller progressivement : vous pouvez ajuster votre fichier `tsconfig.json` afin de laisser passer des *implicit any* par exemple.  
+
+**Certes, c'est une mauvaise pratique, mais cela vous permettra de commencer à typer votre code sans vous brusquer au départ.**  
+
+De plus, vous remarquerez que lorsque vous écrirez du _TypeScript_ plutôt que du _JavaScript_, **les suggestions de _ChatGPT_ (et autres) seront beaucoup plus qualitatives.**  
+
+Vous pouvez donc commencer doucement, en écrivant du code qui ressemble à du _JavaScript_ (y compris dans ses impuretés), et **progressivement vous fixer des objectifs de typage plus stricts.**
 
 ---
 
 ## Suivez-moi !
 
-### Rappels des contraintes (arbitraires) de l'exercice
+### Rappels des contraintes de l'exercice
 
 - **Une fois qu'un livre a été noté par un utilisateur, il ne devient plus possible de changer la note de ce dernier**,
 - **La note d'un livre ne peut aller que de 0 à 5.**
@@ -342,7 +354,9 @@ Afin de sécuriser les mots de passe, nous allons faire deux choses :
 - **Auditer le mot de passe choisi par l'utilisateur** pour le valider ou le rejeter (afin d'éliminer `1234`, `abcabcabc`...)
 - **Hasher le mot de passe avant de le stocker en base de données**
 
-#### Audit du mot de passe
+#### Audit et hash
+
+##### Audit des mots de passe
 
 Commençons par créer un _middleware_ pour **isoler la logique d'audit de mot de passe et la rendre réutilisable.**
 
@@ -414,7 +428,7 @@ export default auditPassword;
 **[:link: ZXCVBN](https://github.com/dropbox/zxcvbn) est une superbe librairie pour vérifier la qualité d'un choix de mot de passe**, que je vous conseille d'aller découvrir un peu plus en détails.  
 Cette librairie standardise un **score de sécurité allant de 1 à 4**, et donne même **des conseils pour améliorer un mot de passe** lorsqu'il est détecté comme insuffisamment sécurisé.
 
-#### Hash du mot de passe
+##### Hash des mots de passe
 
 Continuons avec un _middleware_ qui nous permettra d'**hasher le mot de passe.**
 
@@ -513,11 +527,8 @@ Considérez chacun de vos _middlewares_ comme étant **autonome** !
 
 ## Pentest avec Burp Suite
 
-### Tester son API
-
-{{< wpm-wip >}}
-
-### Tout casser
+Cette section fera l'objet d'un prochain article intégralement dédié à cette thématique.  
+Celui-ci se basera sur le projet _Mon Vieux Grimoire_.
 
 {{< wpm-wip >}}
 
