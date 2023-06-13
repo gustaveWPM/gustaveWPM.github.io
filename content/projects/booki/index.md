@@ -57,12 +57,20 @@ Cliquez sur l'encadré ci-dessous pour **accéder au code source de mon projet**
 ## Pistes pour la réalisation du projet
 
 {{< alert >}}
-**Je n'avais jamais écrit d'HTML, ni de CSS avant de me lancer dans ce projet.**  
-Certains de mes choix sont **expérimentaux !**
+**Cet article n'est pas un guide pas-à-pas !**  
+Il s'agit d'un **condensé des réflexions que je me suis faites.**
 {{< /alert >}}
 
+---
+
+Vous ne comprenez pas un point dans cet article ? :thinking:  
+**Vous venez d'identifier une de vos lacunes** (et c'est une bonne chose).  
+Dans ce cas : **travaillez les ressources fournies avant de poursuivre.**
+
+---
+
 **Afin de réaliser ce projet, il m'a fallu expérimenter en HTML et en CSS.**  
-Cela a comporté son lot d'essais et d'erreurs, et de choix que je me permettrai de détailler dans cet article.
+Cela a comporté son **lot d'essais et de surprises**, et donc de choix à partager.
 
 {{< alert "circle-info" >}}
 Je vous recommande de garder dans l'un de vos onglets cette page web :  
@@ -202,7 +210,7 @@ Faites aussi attention lors de votre utilisation des balises `<section>` et `<ar
 
 ##### Le Validateur W3C (HTML)
 
-Le **validateur W3C** est un outil essentiel, car il vous permettra de vérifier si votre **code HTML et CSS** respecte les normes établies par le _World Wide Web Consortium_ (W3C).
+Le **validateur W3C** est un outil essentiel, car il vous permettra de vérifier si votre **code HTML et CSS** respectent les normes établies par le _World Wide Web Consortium_ (W3C).
 
 Cela vous aidera à **améliorer la qualité de votre code**, à améliorer la **compatibilité entre différents navigateurs** et rendre votre site web plus **accessible aux personnes handicapées**.
 
@@ -251,11 +259,15 @@ Par exemple :
 - [_Playwright_,](https://playwright.dev)
 - [_Selenium + Beautiful Soup_](https://medium.com/ymedialabs-innovation/web-scraping-using-beautiful-soup-and-selenium-for-dynamic-page-2f8ad15efe25)...
 
+{{< alert "circle-info" >}}
+Regarder un peu de ce côté pourrait vous donner une approche complémentaire quant aux sélecteurs CSS, et notamment **comprendre l'importance et l'utilité des attributs `id` (ou `data`) pour la réalisation de tests automatisés.**
+{{< /alert >}}
+
 ---
 
 ##### Validateur W3C (HTML/CSS)
 
-Nous avons déjà présenté le **validateur W3C** [:up_arrow: un peu plus tôt dans cet article.](#validateur-w3c-html)
+[:up_arrow: Nous avons déjà présenté le **validateur W3C** un peu plus tôt dans cet article.](#le-validateur-w3c-html)
 
 Cependant, comme la page du validateur permettant d'activer ou non l'option « **CSS** » n'est pas évidente à trouver du premier coup...
 
@@ -329,7 +341,7 @@ Malgré ce choix, les _Pages speed_ restent très bons à l'heure où j'écris c
 
 ##### Regarder ce que donnent les _benchmarks_ des _Pages speed_ plutôt que de partir sur des _a priori_
 
-Cela est notamment lié au design de la version mobile où **seulement une image est chargée sur téléphone lors du _First Contentful Paint_**.  
+Cela est notamment lié au design de la version mobile où **seulement une image est chargée sur téléphone au-dessus de la _ligne de flottaison_**.  
 
 {{< alert "circle-info" >}}
 **Les images ont été passées du _JPEG_ au _WEBP_, et le logo du _PNG_ au _SVG_.**  
@@ -371,7 +383,7 @@ Par exemple :
 {{< alert "circle-info" >}}
 J'ai une page **avec des images qui sont constamment en excellente qualité**.  
 **Tout en honorant un _Page speed_ tout à fait décent**.  
-**Sans Javascript ni intelligence d'optimisation particulièrement poussée.**
+**Sans Javascript ni intelligence d'optimisation particulière.**
 {{< /alert >}}
 
 ---
@@ -385,7 +397,7 @@ J'ai une page **avec des images qui sont constamment en excellente qualité**.
 Comme on en a plutôt l'habitude en programmation : **le code CSS est lu de haut en bas**.  
 
 {{< alert "circle-info" >}}
-Et tout comme j'en ai également eu l'habitude avec des langages de programmation dits _dynamiques_ : **il est possible de "Patcher" du code CSS en le réécrivant tout ou partie un peu plus bas que là où il a été déclaré pour la première fois.**  
+Et tout comme on a également l'habitude avec des langages de programmation dits _dynamiques_ : **il est possible de "Patcher" du code CSS en le réécrivant tout ou partie un peu plus bas que là où il a été déclaré pour la première fois.**  
 [:link: _Monkey patching_](https://fr.wikipedia.org/wiki/Monkey-Patch)
 {{< /alert >}}
 
@@ -424,7 +436,7 @@ Dans le même principe : si l'on avait d'abord chargé un premier fichier CSS qu
 
 ##### Les variables en CSS
 
-**Il est possible depuis CSS 3 d'utiliser des variables dans son code.**  
+**Il est possible depuis CSS 3 d'utiliser des variables dans ses feuilles de style.**  
 
 Imaginons que l'on parte sur le nuancier suivant :
 
@@ -470,12 +482,12 @@ Le pseudo-élément `:root` va nous permettre de déclarer des _variables global
 Ces variables sont utilisables dans tous les fichiers CSS d'un projet.  
 
 {{< alert "circle-info" >}}
-Dans notre cas, nous n'avons qu'un seul fichier de feuille de style : le fichier `style.css`.  
+Dans notre cas, nous n'avons qu'un seul fichier de feuille de style : `style.css`.  
 Nos variables seront donc utilisables dans l'intégralité de ce fichier.  
 **Gardez tout de même à l'esprit que dans le cas où vous ajouteriez de nouveaux fichiers CSS, ces variables y seraient également accessibles.**
 {{< /alert >}}
 
-Je vais donc pouvoir utiliser ce pseudo-élément en le considérant comme un module `Configuration` :
+Je vais donc pouvoir utiliser ce pseudo-élément, comme un module de configuration globale :
 
 ```css
 :root {
@@ -506,7 +518,7 @@ html p {
 }
 ```
 
-Les paragraphes de ma page auront alors la couleur : `#0065FC`.
+Les paragraphes de ma page auront alors la couleur : {{< wpm-hexacolor hex="#0065FC" >}}.
 
 ##### Une volonté personnelle de séparer la configuration et l'implémentation
 
@@ -522,8 +534,6 @@ Les contraintes imposées sur ce projet ne me le permettaient pas.
 {{< /alert >}}
 
 Afin de clarifier cette volonté dans mon choix de réalisation du projet, j'ai donc décidé d'appeler cette spécificité des _Tweakers_ dans mon code, et ajouté une classe `.has-tweakers` sur les éléments concernés.
-
-_(Et ce n'était pas idéal, nous en rediscuterons.)_
 
 Ainsi :
 
@@ -559,6 +569,13 @@ J'ai également fait le choix d'écrire sous forme de variables certaines spéci
 Ce qui m'a permis par exemple de **calculer dynamiquement la largeur du wrapper qui englobe tout le contenu de ma page web selon la largeur spécifiée sur la maquette (1400 pixels), et ma gestion d'état du _fond perdu_ de ma page.**
 
 ```css
+/* Constants: Top level wrapper width */
+#top-level-wrapper.has-tweakers {
+  --_width: 1400px;
+}
+
+/* ... */
+
 /* Webpage Wrapper */
 #top-level-wrapper {
   /* ... */
@@ -590,13 +607,13 @@ Par la suite, le code deviendra assez classique pour un utilisateur habitué du 
 
 {{< alert "circle-info" >}}
 Peut-on considérer les _media queries_ comme des _événements_ ?  
-Et peut-on commencer à me rapprocher d'une logique de _gestion d'états_ ?
+Et peut-on commencer à se rapprocher d'une logique de _gestion d'états_ ?
 {{< /alert >}}
 
 ###### Cas d'application dans Booki
 
-La maquette de Booki n'était pas très précise concernant l'œil de designer qu'il fallait lui apporter sur un point.  
-Il était question d'une _largeur maximale de 1400 pixels_. Mais aucun aperçu concret de ce que donne le site sur un écran de 1920 pixels de large par exemple.  
+**La maquette de Booki n'était pas très précise en tout point** concernant l'œil de designer qu'il fallait lui apporter.  
+Il était question d'une _largeur maximale de 1400 pixels_. Mais : **aucun aperçu concret de ce que donne le site sur un écran de 1920 pixels de large**. Hum...  
 
 {{< alert "circle-info" >}}
 **Plus flou encore** : selon que l'on regarde la maquette de la version ordinateur, tablette ou mobile, on constate que les marges sur les côtés changent.  
@@ -636,17 +653,19 @@ Ce qui était attendu était de tout simplement laisser les côtés de la page t
 Finalement, il aurait suffi de bêtement centrer la page et laisser un fond blanc, et l'illusion aurait été suffisante...
 
 {{< alert "circle-info" >}}
-Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !
+Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !  
 [:link: _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/#?)
 {{< /alert >}}
 
-C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite entre mon intégration des _marges_ et du _fond perdu_ de la page web. À présent, si j'applique un arrière-plan qui n'est pas blanc, je vois de façon évidente que cette spécificité a bien été comprise et appliquée.
+**C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite entre mon intégration des _marges_ et du _fond perdu_ de la page web !**  
+
+À présent, si j'applique un arrière-plan qui n'est pas blanc, je vois de façon évidente que cette spécificité a bien été comprise et appliquée.
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
 {{< figure
     src="./assets/integration-booki-marges-et-fond-perdu.webp"
     alt="Aperçu des marges et du fond perdu de l'intégration de la page web d'accueil de l'agence de voyage Booki, version ordinateur"
-    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la version ordinateur de la landing page de Booki."
+    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la version ordinateur de la *landing page* de Booki."
     default=true
     loading="lazy"
 >}}
@@ -654,9 +673,13 @@ C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite
 
 ###### Implémentation d'une logique de largeur dynamique et de fond perdu
 
-Dans mon pseudo-élément `:root`, je définis ma variable globale `--booki-bleed-current-state-value`, et je lui donne comme valeur initiale : `var(--booki-bleed-desktop)`. Pour rappel : nous sommes sur une intégration en _Desktop First_. 
+Dans mon pseudo-élément `:root`, je définis ma variable globale `--booki-bleed-current-state-value`, et je lui donne comme valeur initiale : `var(--booki-bleed-desktop)`.  
 
 `var(--booki-bleed-desktop)` vient de devenir la valeur de _fallback_ de `--booki-bleed-current-state-value`.  
+
+{{< alert "circle-info" >}}
+Pour rappel : nous sommes sur une intégration en _Desktop First_. C'est pour cette raison que c'est `var(--booki-bleed-desktop)` qui a été choisi.
+{{< /alert >}}
 
 À présent, je vais aller modifier cette variable dans mes _breakpoints_.
 
@@ -691,7 +714,7 @@ Et _zouh_ ! :tada:
 {{< figure
     src="./assets/booki-agence-voyage-largeur-dynamique-tablette.webp"
     alt="Aperçu des marges et du fond perdu de l'intégration de la page web d'accueil de l'agence de voyage Booki, version tablette"
-    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la landing page de Booki, version tablette."
+    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la *landing page* de Booki, version tablette."
     default=true
     loading="lazy"
 >}}
@@ -701,7 +724,7 @@ Et _zouh_ ! :tada:
 {{< figure
     src="./assets/booki-agence-voyage-largeur-dynamique-mobile.webp"
     alt="Aperçu des marges et du fond perdu de l'intégration de la page web d'accueil de l'agence de voyage Booki, version mobile"
-    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la landing page de Booki, version téléphone."
+    caption="Mise en évidence de la **distinction entre le fond perdu et la largeur de la page** dans l'intégration de la *landing page* de Booki, version téléphone."
     default=true
     loading="lazy"
 >}}
@@ -741,7 +764,7 @@ Nous pouvons retrouver l'origine de ce problème grâce à cet outil.
 {{< figure
     src="./assets/specificite-selecteur-css-epic-fail.webp"
     alt="Mise en évidence d'une différence de score de spécificité entre deux sélecteurs CSS"
-    caption="`.filter-button.has-tweakers` obtient un meilleur score de spécificité que `.filter-button`, car il chaîne deux noms de classes CSS."
+    caption="`.filter-button.has-tweakers` obtient un meilleur score de spécificité que `.filter-button`, **car il chaîne deux noms de classes CSS.**"
     default=true
     loading="lazy"
 >}}
@@ -749,13 +772,13 @@ Nous pouvons retrouver l'origine de ce problème grâce à cet outil.
 
 {{< alert >}}
 **Cela signifie que les propriétés que l'on écrit dans `.filter-button.has-tweakers` sont prioritaires sur celles que l'on écrit dans `.filter-button` !**  
-Il s'agit d'une particularité dans la logique de Monkey Patch de CSS dont je n'avais pas parlé jusqu'à présent.
+Il s'agit d'une particularité dans la logique de *Monkey Patch* de CSS dont je n'avais pas parlé jusqu'à présent.
 {{< /alert >}}
 
 Aïe...  
 C'est très embêtant.
 
-Mais alors que faire ?
+Mais alors que faire ?  
 Également écrire `.filter-button.has-tweakers` dans mes media queries ?  
 
 **Je trouve ce choix très ennuyeux**, car j'aimerais que lorsque je navigue de `.has-tweakers` en `.has-tweakers` dans mon fichier CSS à l'aide du raccourci clavier `CTRL+F`, je ne puisse pas **brutalement changer de contexte de configuration sans m'en rendre compte**.
@@ -786,8 +809,8 @@ Si vous n'êtes pas sûr d'avoir bien compris la **notion de spécificité en CS
 
 ---
 
-Bravo !  
-Vous avez terminé la lecture de cet article.
+Bravo ! :tada:  
+**Vous avez terminé la lecture de cet article !**
 
 **Si ce n'est pas déjà fait, vous pouvez voir le résultat en lançant la démo de ce projet.**
 
@@ -801,7 +824,7 @@ Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalis�
 {{< /button >}}
 </p>
 
-Merci de m'avoir lu !
+<p align="center" style="margin-top:2.5em">Merci de m'avoir lu.</p>
 
 ---
 
@@ -817,7 +840,7 @@ Merci de m'avoir lu !
   - [:link: :fr: Mettez en place votre environnement front-end (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/6943241-mettez-en-place-votre-environnement-front-end)
   - [:link: :fr: Gérez du code avec Git et GitHub (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github)
   - [:link: :fr: Corrigez vos bugs et trouvez une solution à vos problèmes de code (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/8030706-corrigez-vos-bugs-et-trouvez-une-solution-a-vos-problemes-de-code)
-  - [:link: :us: _Write code faster in VS Code with Emmet shortcuts_](https://www.youtube.com/watch?v=45eWEO0gRHI)
+  - [:link: :us: _Write code faster in VS Code with Emmet shortcuts (YouTube)_](https://www.youtube.com/watch?v=45eWEO0gRHI)
 
 - Commencer HTML et CSS
   - [:link: :fr: Apprendre l'HTML (_Grafikart_)](https://www.youtube.com/watch?v=oEAuNzWXRjM&list=PLjwdMgw5TTLUeixVGPNl1uZNeJy4UY6qX)
@@ -835,7 +858,7 @@ Merci de m'avoir lu !
   - [:link: :us: _CSS variables: Scoping_](https://blog.logrocket.com/css-variables-scoping/)
   - [:link: :us: _How to Override CSS Styles_](https://www.w3docs.com/snippets/css/how-to-override-css-styles.html)
   - [:link: :us: _Delightful ways to write reusable CSS using subclasses_](https://medium.com/insider-inc-engineering/delightful-ways-to-write-reusable-css-using-subclasses-903e90c9cf87)
-  - [:link: :fr: _(Flexbox) min-width: 0 is the new zoom: 1_](https://raphaelgoetter.wordpress.com/2016/11/09/flexbox-min-width-0-is-the-new-zoom-1/#?)
+  - [:link: :fr: _(Flexbox) `min-width: 0` is the new `zoom: 1`_](https://raphaelgoetter.wordpress.com/2016/11/09/flexbox-min-width-0-is-the-new-zoom-1/#?)
   - [:link: :fr: Comprendre le Viewport dans le Web mobile](https://www.alsacreations.com/article/lire/1490-Comprendre-le-Viewport-dans-le-Web-mobile.html#?)
 
 - Notions de design
