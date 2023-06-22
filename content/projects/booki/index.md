@@ -282,7 +282,7 @@ Cependant, comme la page du validateur permettant d'activer ou non l'option « *
 ## Choix personnels
 
 {{< alert >}}
-Il n'était pas autorisé d'utiliser _SASS_, ni de _Javascript_, ni de _bundler_...
+Il n'était pas autorisé d'utiliser _SASS_, ni de _JavaScript_, ni de _bundler_...
 {{< /alert >}}
 
 ### Rappels des contraintes (arbitraires) de l'exercice
@@ -315,7 +315,7 @@ Pourtant, ce serait plutôt l'inverse que l'on chercherait à prioriser : **avoi
 
 ##### Une catastrophe en termes de _Page speed_ ?
 
-**C'est donc l'impossibilité d'utiliser du Javascript m'a fait trancher pour ce choix.**  
+**C'est donc l'impossibilité d'utiliser du JavaScript m'a fait trancher pour ce choix.**  
 
 Malgré ce choix, les _Pages speed_ restent très bons à l'heure où j'écris ces lignes.
 
@@ -383,7 +383,7 @@ Par exemple :
 {{< alert "circle-info" >}}
 J'ai une page **avec des images qui sont constamment en excellente qualité**.  
 **Tout en honorant un _Page speed_ tout à fait décent**.  
-**Sans Javascript ni intelligence d'optimisation particulière.**
+**Sans JavaScript ni intelligence d'optimisation particulière.**
 {{< /alert >}}
 
 ---
