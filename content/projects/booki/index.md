@@ -7,6 +7,8 @@ topics: ['HTML', 'CSS', 'Front-end', 'Bootcamp OC', 'Débutant']
 slug: "booki-integration-maquette"
 series: ["Mes projets réalisés en formation chez OpenClassrooms"]
 series_order: 1
+authors:
+  - "gustave"
 ---
 
 ---

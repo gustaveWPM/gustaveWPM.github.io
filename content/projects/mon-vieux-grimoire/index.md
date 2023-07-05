@@ -7,6 +7,8 @@ topics: ['TypeScript', 'ExpressJS', 'MongoDB', 'Backend', 'Bootcamp OC', 'Interm
 slug: "mon-vieux-grimoire-backend"
 series: ["Mes projets réalisés en formation chez OpenClassrooms"]
 series_order: 6
+authors:
+  - "gustave"
 ---
 
 ---
