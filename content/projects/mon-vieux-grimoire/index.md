@@ -1,7 +1,7 @@
 ---
 title: "Mon vieux grimoire (back-end d'un site de notation de livres)"
 date: 2023-06-06
-draft: false
+draft: true
 description: "Avant dernier projet du parcours de développeur web d'OpenClassrooms : développer le back-end d'un site web de présentation de fiches produits."
 topics: ['TypeScript', 'ExpressJS', 'MongoDB', 'Backend', 'Bootcamp OC', 'Intermédiaire']
 slug: "mon-vieux-grimoire-backend"
@@ -244,7 +244,7 @@ Si vous jetez un œil au [:link: fichier app.ts](https://github.com/gustaveWPM/O
 
 ---
 
-**Pour des raisons _Legacy_ qui me sont propres**, j'ai fait le choix d'intégrer à la fois le _middleware_ pour pouvoir parser le _body_ de mes requêtes API en tant que _JSON_ ou en tant qu'_URL Encoded_.  
+**Pour des raisons « _Legacy_ » qui me sont propres**, j'ai fait le choix d'intégrer à la fois le _middleware_ pour pouvoir parser le _body_ de mes requêtes API en tant que _JSON_ ou en tant qu'_URL Encoded_.  
 
 **Le parsing des _URL encodées_ pourrait tout à fait être ignoré.**
 
