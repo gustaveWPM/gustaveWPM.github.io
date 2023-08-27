@@ -1,7 +1,7 @@
 ---
 title: "Mon vieux grimoire (back-end d'un site de notation de livres)"
 date: 2023-06-06
-draft: false
+draft: true
 description: "Avant dernier projet du parcours de développeur web d'OpenClassrooms : développer le back-end d'un site web de présentation de fiches produits."
 topics: ['TypeScript', 'ExpressJS', 'MongoDB', 'Backend', 'Bootcamp OC', 'Intermédiaire']
 slug: "mon-vieux-grimoire-backend"
