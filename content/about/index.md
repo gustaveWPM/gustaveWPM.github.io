@@ -177,7 +177,7 @@ layout: "simple"
       <a href="https://github.com/gustaveWPM/OC-Mon-Vieux-Grimoire/" target="_blank" rel="external" class="min-w-full">
         <div
           class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
-          <div class="w-full thumbnail_card nozoom" style="background-image:url('/projects/mon-vieux-grimoire-backend/featured.jpg');"></div>
+          <div class="w-full thumbnail_card nozoom" style="background-image:url('/projects/mon-vieux-grimoire/featured.jpg');"></div>
           <div class="px-6 py-4">
             <div>
               <div
