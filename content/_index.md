@@ -16,9 +16,6 @@ Je partage ici mes projets dans mes **articles de blog**.
 <em>(Il m'arrive de coder d'autres choses.)</em>
 {{< /typeit >}}
 &nbsp;
-{{< alert "circle-info" >}}
-Je suis bientôt diplômé [_Développeur Web_ par _OpenClassrooms_.](https://openclassrooms.com/fr/paths/717-developpeur-web)
-{{< /alert >}}
 
 <a
 role="button"
