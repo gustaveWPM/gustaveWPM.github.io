@@ -3,7 +3,7 @@ title: "Booki (Page d'accueil d'une agence de voyage)"
 date: 2023-06-04
 draft: false
 description: "Booki est le premier projet du parcours de développeur web d'OpenClassrooms qui consiste en l'intégration de maquettes Figma."
-topics: ['HTML', 'CSS', 'Front-end', 'Bootcamp OC', 'Débutant']
+topics: ["HTML", "CSS", "Front-end", "Bootcamp OC", "Débutant"]
 slug: "booki-integration-maquette"
 series: ["Mes projets réalisés en formation chez OpenClassrooms"]
 series_order: 1
@@ -14,7 +14,7 @@ authors:
 ---
 
 {{< lead >}}
-Tout premier projet du [**parcours de développeur web** d'_Open Classrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.  
+Tout premier projet du [**parcours de développeur web** d'_Open Classrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.
 
 C'est l'occasion parfaite de **commencer à créer des pages web** et apprendre des notions comme **le HTML sémantique**, ou encore **les variables et sélecteurs CSS !**
 {{< /lead >}}
@@ -76,7 +76,7 @@ Cela a comporté son **lot d'essais et de surprises**, et donc de choix à parta
 
 {{< alert "circle-info" >}}
 Je vous recommande de garder dans l'un de vos onglets cette page web :  
-[:link: Maquettes Figma de Booki (PC, tablette, mobile)](https://www.figma.com/file/aen32jonHhD7JnIEL2b3sE/ARCHIVED-Maquettes-Booki-(desktop%2C-mobile%2C-tablette)?type=design&node-id=349-1)
+[:link: Maquettes Figma de Booki (PC, tablette, mobile)](<https://www.figma.com/file/aen32jonHhD7JnIEL2b3sE/ARCHIVED-Maquettes-Booki-(desktop%2C-mobile%2C-tablette)?type=design&node-id=349-1>)
 {{< /alert >}}
 
 ### Bien commencer
@@ -94,11 +94,11 @@ Avant de commencer à travailler, je vous recommande de comprendre (dans les gra
 {{< /button >}}
 </p>
 
-Comme vous le constaterez, _l'indentation_ (espaces en début de ligne) est un sujet qui revient en permanence avec le HTML.  
+Comme vous le constaterez, _l'indentation_ (espaces en début de ligne) est un sujet qui revient en permanence avec le HTML.
 
-**Pour ce projet, vous n'aurez pas besoin d'extensions particulières dans votre éditeur de code.**  
+**Pour ce projet, vous n'aurez pas besoin d'extensions particulières dans votre éditeur de code.**
 
-Je vous recommande juste de vous assurer que votre *formatter* fonctionne correctement afin de pouvoir rapidement **indenter automatiquement** votre code.
+Je vous recommande juste de vous assurer que votre _formatter_ fonctionne correctement afin de pouvoir rapidement **indenter automatiquement** votre code.
 
 {{< alert "circle-info" >}}
 Dans VS Code, utilisez la combinaison de touches suivante :  
@@ -128,6 +128,7 @@ _Et si vous souhaitez utiliser un autre formatter que celui de VSCode..._
 ---
 
 **Vous pouvez également vous épauler d'une IA :**
+
 - [:link: ChatGPT,](https://chat.openai.com)
 - [:link: Perplexity,](https://perplexity.ai)
 - [:link: GitHub Copilot,](https://github.com/features/copilot)
@@ -162,7 +163,7 @@ Vous trouverez toutes les ressources pédagogiques pour obtenir des fondamentaux
 
 ##### De la maquette au HTML
 
-[:link: Aujourd'hui, _OpenClassrooms_ fournissent un squelette de code HTML dans l'énoncé de Booki.](https://github.com/OpenClassrooms-Student-Center/booki-starter-code) Ce n'était pas le cas lorsque j'avais réalisé mon projet.  
+[:link: Aujourd'hui, _OpenClassrooms_ fournissent un squelette de code HTML dans l'énoncé de Booki.](https://github.com/OpenClassrooms-Student-Center/booki-starter-code) Ce n'était pas le cas lorsque j'avais réalisé mon projet.
 
 Outre ce point de détail, l'idée reste la même : prendre la maquette, et **l'annoter pour pouvoir la transcrire en HTML.**
 
@@ -183,6 +184,7 @@ Outre ce point de détail, l'idée reste la même : prendre la maquette, et **l'
 ##### La sémantique (SEO)
 
 Voici l'ensemble des éléments de sémantique HTML que j'ai choisi d'utiliser pour ce projet **(chaque élément de la liste est cliquable et vous renverra directement vers une page de documentation)** :
+
 - [:link: `<meta name="description" content="..." />`](https://fr.semrush.com/blog/basiques-seo-meta-description/)
 - [:link: `<title>`](https://fr.semrush.com/blog/balise-title/)
 
@@ -190,6 +192,7 @@ Voici l'ensemble des éléments de sémantique HTML que j'ai choisi d'utiliser p
 Testez vos _meta description_ et _title_ grâce à un **simulateur de SERP**.  
 [:link: Google SERP Simulator](https://mangools.com/free-seo-tools/serp-simulator)
 {{< /alert >}}
+
 - [:link: `<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
 - [:link: `<nav>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/nav)
 - [:link: `<main>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/main)
@@ -240,7 +243,7 @@ Vous trouverez toutes les ressources pédagogiques pour obtenir des fondamentaux
 
 ##### Sélecteurs
 
-L'importance des sélecteurs CSS réside dans leur capacité à apporter **flexibilité et précision** lorsqu'il s'agit de styliser les pages web.  
+L'importance des sélecteurs CSS réside dans leur capacité à apporter **flexibilité et précision** lorsqu'il s'agit de styliser les pages web.
 
 En utilisant des sélecteurs bien choisis, il est possible de définir des styles pour des éléments individuels, des classes d'éléments ou des groupes d'éléments, ce qui permet **de personnaliser l'apparence d'une page de manière signifiante**.
 
@@ -257,6 +260,7 @@ Ces sélecteurs peuvent également s'avérer **utiles pour l'écriture d'outils 
 {{< /alert >}}
 
 Par exemple :
+
 - [_Puppeteer_,](https://pptr.dev)
 - [_Playwright_,](https://playwright.dev)
 - [_Selenium + Beautiful Soup_](https://medium.com/ymedialabs-innovation/web-scraping-using-beautiful-soup-and-selenium-for-dynamic-page-2f8ad15efe25)...
@@ -290,7 +294,7 @@ Il n'était pas autorisé d'utiliser _SASS_, ni de _JavaScript_, ni de _bundler_
 ### Rappels des contraintes (arbitraires) de l'exercice
 
 Ce projet imposait la réalisation d'un projet **totalement vanilla**.  
-C'est-à-dire qu'il ne fallait rendre que deux fichiers : le fichier `index.html` et le fichier `style.css`.  
+C'est-à-dire qu'il ne fallait rendre que deux fichiers : le fichier `index.html` et le fichier `style.css`.
 
 {{< alert "circle-info" >}}
 **Cependant, je souhaitais tout de même produire un code relativement modulaire.**  
@@ -298,28 +302,28 @@ C'est-à-dire qu'il ne fallait rendre que deux fichiers : le fichier `index.html
 
 #### Concernant le HTML
 
-Le code HTML de ce projet est assez classique, et une bonne compréhension du HTML est suffisante pour en lire le code.  
-La seule particularité à noter est que j'ai ici fait un choix arbitraire quant à l'optimisation des images : j'ai fait le choix d'afficher les images **avec une meilleure qualité selon la largeur du viewport.**  
+Le code de ce projet est assez classique, et une bonne compréhension du HTML est suffisante pour en lire le code.  
+La seule particularité à noter est que j'ai ici fait un choix plutôt trivial quant à l'optimisation des images : afficher les images **avec une meilleure qualité selon la largeur du viewport... mais à l'inverse de ce qui aurait dû être fait : moins le viewport est large, plus la résolution des images affichées est grande.**
 
-**Je souhaitais que les images de la page d'accueil soient correctement affichées sur ordinateur lorsque l'utilisateur zoome.**  
+**Je souhaitais que les images de la page d'accueil soient correctement affichées sur ordinateur lorsque l'utilisateur zoome.**
 
 {{< alert "circle-info" >}}
 Plus l'on zoome, moins le viewport est large.
 {{< /alert >}}
 
-**Mais cela signifie aussi que les versions mobile/tablette doivent charger des images plus lourdes, car de meilleure qualité, car celles-ci sont également impactées (négativement) par ce choix, au sacrifice de conserver un bon affichage de la page d'accueil lorsque celle-ci est zoomée sur ordinateur.**  
+**Mais cela signifie aussi que les versions mobile/tablette doivent charger des images plus lourdes, car de meilleure qualité. On a donc un impact très négatif à cause de ce choix : au sacrifice de conserver un bon affichage de la page d'accueil lorsque celle-ci est zoomée sur ordinateur, on n'est pas très "Green tech" envers les mobiles et tablettes... !**
 
 [:link: Comprendre le Viewport dans le Web mobile](https://www.alsacreations.com/article/lire/1490-Comprendre-le-Viewport-dans-le-Web-mobile.html#?)
 
 {{< alert "circle-info" >}}
-Pourtant, ce serait plutôt l'inverse que l'on chercherait à prioriser : **avoir la page la plus légère possible pour les téléphones**.
+Ce serait plutôt l'inverse que l'on chercherait à prioriser : **avoir la page la plus légère possible pour les téléphones et tablettes**.
 {{< /alert >}}
 
 ##### Une catastrophe en termes de _Page speed_ ?
 
-**C'est donc l'impossibilité d'utiliser du JavaScript m'a fait trancher pour ce choix.**  
+**Pour rappel : c'est l'impossibilité d'utiliser du JavaScript qui m'a fait trancher pour ce choix (contrainte arbitraire du projet...).**
 
-Malgré ce choix, les _Pages speed_ restent très bons à l'heure où j'écris ces lignes.
+Malgré ce choix, les _Page speeds_ restent très bons à l'heure où j'écris ces lignes.
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
 {{< figure
@@ -343,14 +347,20 @@ Malgré ce choix, les _Pages speed_ restent très bons à l'heure où j'écris c
 
 ##### Regarder ce que donnent les _benchmarks_ des _Pages speed_ plutôt que de partir sur des _a priori_
 
-Cela est notamment lié au design de la version mobile où **seulement une image est chargée sur téléphone au-dessus de la _ligne de flottaison_**.  
+Cela est notamment lié au design de la version mobile où **seulement une image est chargée sur téléphone au-dessus de la _ligne de flottaison_**.
 
 {{< alert "circle-info" >}}
 **Les images ont été passées du _JPEG_ au _WEBP_, et le logo du _PNG_ au _SVG_.**  
 En l'occurrence, cela n'a pas changé grand chose aux indicateurs.
 {{< /alert >}}
 
-Aucune de ces images ne sont dans le *CSS* sous forme de *background image* : **elles sont bien toutes présentes dans des balises HTML**.
+&nbsp;
+
+{{< alert "circle-info" >}}
+J'ai tout de même ajouté des attributs `loading="lazy"` entre temps (c'est au moins ça de pris)...
+{{< /alert >}}
+
+Aucune de ces images ne sont dans le _CSS_ sous forme de _background image_ : **elles sont bien toutes présentes dans des balises HTML**.
 
 Par exemple :
 
@@ -359,16 +369,28 @@ Par exemple :
   <div class="lodging-card-wrapper has-tweakers">
     <article class="lodging-card">
       <picture class="thumbnail">
-        <source srcset="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-          media="(max-width: 768px)">
-        <source srcset="./images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-          media="(max-width: 1281px)">
-        <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-          alt="Aperçu de l'Auberge La Canebière">
+        <source
+          srcset="
+            ./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg
+          "
+          media="(max-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg
+          "
+          media="(max-width: 1281px)"
+        />
+        <img
+          src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+          alt="Aperçu de l'Auberge La Canebière"
+        />
       </picture>
       <div class="lodging-card-description">
         <h3 class="is-title">Auberge La Canebière</h3>
-        <p class="price-p">Nuit à partir de 25<span class="is-fw-semibold">€</span></p>
+        <p class="price-p">
+          Nuit à partir de 25<span class="is-fw-semibold">€</span>
+        </p>
         <div class="rating-container">
           <i class="fas fa-star is-checked" aria-hidden="true"></i>
           <i class="fas fa-star is-checked" aria-hidden="true"></i>
@@ -383,7 +405,7 @@ Par exemple :
 ```
 
 {{< alert "circle-info" >}}
-J'ai une page **avec des images qui sont constamment en excellente qualité**.  
+Résultat : j'ai une page **avec des images qui sont constamment en excellente qualité**.  
 **Tout en honorant un _Page speed_ tout à fait décent**.  
 **Sans JavaScript ni intelligence d'optimisation particulière.**
 {{< /alert >}}
@@ -396,7 +418,7 @@ J'ai une page **avec des images qui sont constamment en excellente qualité**.
 
 ##### Notions de Monkey patching et de modularisation
 
-Comme on en a plutôt l'habitude en programmation : **le code CSS est lu de haut en bas**.  
+Comme on en a plutôt l'habitude en programmation : **le code CSS est lu de haut en bas**.
 
 {{< alert "circle-info" >}}
 Et tout comme on a également l'habitude avec des langages de programmation dits _dynamiques_ : **il est possible de "Patcher" du code CSS en le réécrivant tout ou partie un peu plus bas que là où il a été déclaré pour la première fois.**  
@@ -405,7 +427,7 @@ Et tout comme on a également l'habitude avec des langages de programmation dits
 
 ##### Simple rappel concernant la notion de surchage en CSS
 
-Commençons par quelque chose que (presque) tout le monde sait. 
+Commençons par quelque chose que (presque) tout le monde sait.
 
 Cela fait partie des premières choses que l'on apprend concernant le CSS : **c'est le dernier choix que vous faites en CSS qui est pris en compte.**
 
@@ -438,7 +460,7 @@ Dans le même principe : si l'on avait d'abord chargé un premier fichier CSS qu
 
 ##### Les variables en CSS
 
-**Il est possible depuis CSS 3 d'utiliser des variables dans ses feuilles de style.**  
+**Il est possible depuis CSS 3 d'utiliser des variables dans ses feuilles de style.**
 
 Imaginons que l'on parte sur le nuancier suivant :
 
@@ -453,6 +475,7 @@ Imaginons que l'on parte sur le nuancier suivant :
 </div>
 
 J'aurais donc **seulement cinq couleurs à utiliser sur l'intégralité du design d'un produit :**
+
 - A : {{< wpm-hexacolor hex="#005270" >}}
 - B : {{< wpm-hexacolor hex="#49C5F2" >}}
 - C : {{< wpm-hexacolor hex="#00B0F0" >}}
@@ -460,7 +483,8 @@ J'aurais donc **seulement cinq couleurs à utiliser sur l'intégralité du desig
 - E : {{< wpm-hexacolor hex="#008ABD" >}}
 
 J'ai à présent deux possibilités :
-- Écrire partout dans mon code, en dur, {{< wpm-hexacolor hex="#005270" >}} dès lors que j'ai besoin de la couleur A (**pas bien !**)
+
+- Écrire partout dans mon code, en dur, {{< wpm-hexacolor hex="#005270" >}} dès lors que j'ai besoin de la couleur A (**pas bien ! Pas bien du tout du tout !**)
 - **Créer une variable `--primary-color` et lui donner la valeur {{< wpm-hexacolor hex="#005270" >}}, puis écrire `var(--primary-color)`.**
 
 ---
@@ -472,16 +496,16 @@ Comme dans d'autres langages de programmation, les variables du CSS sont « Scop
 [:link: CSS variables: Scoping](https://blog.logrocket.com/css-variables-scoping/)
 {{< /alert >}}
 
-Cela permet d'appliquer une intelligence encore plus fine à son utilisation des variables.  
+Cela permet d'appliquer une intelligence encore plus fine à son utilisation des variables.
 
-**Dans le cas d'un nuancier à appliquer sur l'intégralité d'un produit, c'est bien plus un handicap qu'une force.**
+**Néanmoins, dans le cas d'un nuancier à appliquer sur l'intégralité d'un produit, c'est bien plus un handicap qu'une force. C'est pour cette raison que l'on déclarera ces variables dans le scope global, dans le pseudo-élément `:root`.**
 
 ---
 
 ##### Le pseudo-élément `:root` en CSS
 
 Le pseudo-élément `:root` va nous permettre de déclarer des _variables globales_.  
-Ces variables sont utilisables dans tous les fichiers CSS d'un projet.  
+Ces variables sont utilisables dans tous les fichiers CSS d'un projet.
 
 {{< alert "circle-info" >}}
 Dans notre cas, nous n'avons qu'un seul fichier de feuille de style : `style.css`.  
@@ -494,16 +518,16 @@ Je vais donc pouvoir utiliser ce pseudo-élément, comme un module de configurat
 ```css
 :root {
   /* Configuration.globalLayout => font */
-  --booki-font: 'Raleway';
+  --booki-font: "Raleway";
 
   /* Configuration.chart => Static Colors */
-  --booki-chart-primary: #0065FC;
-  --booki-chart-bg-color: #F2F2F2;
+  --booki-chart-primary: #0065fc;
+  --booki-chart-bg-color: #f2f2f2;
   --booki-chart-sections-bg-color: white;
-  --booki-chart-filter-border-color: #D9D9D9;
+  --booki-chart-filter-border-color: #d9d9d9;
 
   /* Configuration.chart => FX Colors */
-  --booki-chart-filter-btn-hover: #DEEBFF;
+  --booki-chart-filter-btn-hover: #deebff;
   --booki-inactive-menu-elm-indicator-color: transparent;
   --booki-active-menu-elm-indicator-color: var(--booki-chart-primary);
   --booki-chart-blue-btn-hover: var(--booki-chart-primary);
@@ -524,11 +548,11 @@ Les paragraphes de ma page auront alors la couleur : {{< wpm-hexacolor hex="#006
 
 ##### Une volonté personnelle de séparer la configuration et l'implémentation
 
-**J'ai à présent mes variables globales dans mon pseudo-élément `:root`.**  
+**J'ai à présent mes variables globales dans mon pseudo-élément `:root`.**
 
-Je voudrais, immédiatement après dans mon code CSS, décrire la configuration globale de chacun de mes éléments.
+Je voudrais, immédiatement après décrire la configuration globale de chacun de mes éléments dans mon code CSS.
 
-**J'aurais bien aimé pouvoir séparer ces informations dans plusieurs fichiers CSS, puis jouer avec la _at-rule_ `@import` et un _bundler_ afin de pouvoir tout regrouper dans un seul fichier CSS...**
+**J'aurais bien aimé pouvoir séparer ces informations dans plusieurs fichiers CSS, puis jouer avec la _at-rule_ `@import` et un _bundler_ afin de pouvoir tout regrouper dans un seul fichier CSS au déploiement...**
 
 {{< alert >}}
 **Mais ce n'était pas possible !**  
@@ -554,13 +578,17 @@ Ainsi :
 /* Mutables: Header navigation menu's colors (NOT on mouse-over) */
 .header-nav.has-tweakers {
   --_menu-active-item-hyperlink-color: inherit;
-  --_menu-active-item-border-top-color: var(--booki-inactive-menu-elm-indicator-color);
+  --_menu-active-item-border-top-color: var(
+    --booki-inactive-menu-elm-indicator-color
+  );
 }
 
 /* Mutables: Header navigation menu's colors (WHEN on mouse-over) */
 .header-nav-item.has-tweakers:hover {
   --_menu-active-item-hyperlink-color: var(--booki-chart-primary);
-  --_menu-active-item-border-top-color: var(--booki-active-menu-elm-indicator-color);
+  --_menu-active-item-border-top-color: var(
+    --booki-active-menu-elm-indicator-color
+  );
   border-top-width: var(--_border-top-width);
 }
 
@@ -589,6 +617,7 @@ Ce qui m'a permis par exemple de **calculer dynamiquement la largeur du wrapper 
 Ici, la variable `--_width` n'est accessible que dans le contexte de `#top-level-wrapper` et de ses éléments enfants (principe de _scope_).
 
 J'ai à présent un code CSS qui commence par :
+
 - Définir des variables globales,
 - Définir des _Tweakers_ qui permettent de m'adapter à la maquette, sans mêler le fond et la forme de mon code,
 - Créer une logique de calcul interne (la notion de _gestion d'états_ sera expliquée plus tard).
@@ -599,7 +628,7 @@ Par la suite, mon code comportera la ligne :
 /* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
 ```
 
-Cela signifie que **je signale à mon utilisateur que les lignes ci-après du code seront plus techniques : il ne s'agit plus de _Tweakers_ que n'importe qui pourrait venir modifier sans provoquer des comportements à la fois inattendus et difficilement compréhensibles**.  
+Cela signifie que **je signale à mon utilisateur que les lignes ci-après du code seront plus techniques : il ne s'agit plus de _Tweakers_ que n'importe qui pourrait venir modifier sans provoquer des comportements à la fois inattendus et difficilement compréhensibles**.
 
 J'ai donc un code qui respecte une certaine **notion de séparation de configuration et d'implémentation.**
 
@@ -615,7 +644,7 @@ Et peut-on commencer à se rapprocher d'une logique de _gestion d'états_ ?
 ###### Cas d'application dans Booki
 
 **La maquette de Booki n'était pas très précise en tout point** concernant l'œil de designer qu'il fallait lui apporter.  
-Il était question d'une _largeur maximale de 1400 pixels_. Mais : **aucun aperçu concret de ce que donne le site sur un écran de 1920 pixels de large**. Hum...  
+Il était question d'une _largeur maximale de 1400 pixels_. Mais : **aucun aperçu concret de ce que donne le site sur un écran de 1920 pixels de large**. Hum...
 
 {{< alert "circle-info" >}}
 **Plus flou encore** : selon que l'on regarde la maquette de la version ordinateur, tablette ou mobile, on constate que les marges sur les côtés changent.  
@@ -659,7 +688,7 @@ Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !
 [:link: _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/#?)
 {{< /alert >}}
 
-**C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite entre mon intégration des _marges_ et du _fond perdu_ de la page web !**  
+**C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite entre mon intégration des _marges_ et du _fond perdu_ de la page web !**
 
 À présent, si j'applique un arrière-plan qui n'est pas blanc, je vois de façon évidente que cette spécificité a bien été comprise et appliquée.
 
@@ -675,9 +704,9 @@ Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !
 
 ###### Implémentation d'une logique de largeur dynamique et de fond perdu
 
-Dans mon pseudo-élément `:root`, je définis ma variable globale `--booki-bleed-current-state-value`, et je lui donne comme valeur initiale : `var(--booki-bleed-desktop)`.  
+Dans mon pseudo-élément `:root`, je définis ma variable globale `--booki-bleed-current-state-value`, et je lui donne comme valeur initiale : `var(--booki-bleed-desktop)`.
 
-`var(--booki-bleed-desktop)` vient de devenir la valeur de _fallback_ de `--booki-bleed-current-state-value`.  
+`var(--booki-bleed-desktop)` vient de devenir la valeur de _fallback_ de `--booki-bleed-current-state-value`.
 
 {{< alert "circle-info" >}}
 Pour rappel : nous sommes sur une intégration en _Desktop First_. C'est pour cette raison que c'est `var(--booki-bleed-desktop)` qui a été choisi.
@@ -699,10 +728,10 @@ Pour rappel : nous sommes sur une intégration en _Desktop First_. C'est pour ce
     --booki-bleed-current-state-value: var(--booki-bleed-mobile);
   }
 
-  #content>.lodgings-section,
-  #content>.activities,
-  #top-level-wrapper>#header,
-  #top-level-wrapper>#footer {
+  #content > .lodgings-section,
+  #content > .activities,
+  #top-level-wrapper > #header,
+  #top-level-wrapper > #footer {
     padding: 0;
   }
 }
@@ -739,7 +768,7 @@ Imaginons que j'écrive :
 ```css
 .filter-button.has-tweakers {
   /* ... */
-  padding: .9rem 1.2rem .9rem .9rem;
+  padding: 0.9rem 1.2rem 0.9rem 0.9rem;
   /* ... */
 }
 ```
@@ -749,7 +778,7 @@ Puis que je décide de _monkey patch_ la valeur de cette propriété `padding` p
 ```css
 @media (min-width: 366px) and (max-width: 495px) {
   .filter-button {
-    padding: .5rem .8rem .5rem .5rem;
+    padding: 0.5rem 0.8rem 0.5rem 0.5rem;
   }
 }
 ```
@@ -774,25 +803,25 @@ Nous pouvons retrouver l'origine de ce problème grâce à cet outil.
 
 {{< alert >}}
 **Cela signifie que les propriétés que l'on écrit dans `.filter-button.has-tweakers` sont prioritaires sur celles que l'on écrit dans `.filter-button` !**  
-Il s'agit d'une particularité dans la logique de *Monkey Patch* de CSS dont je n'avais pas parlé jusqu'à présent.
+Il s'agit d'une particularité dans la logique de _Monkey Patch_ de CSS dont je n'avais pas parlé jusqu'à présent.
 {{< /alert >}}
 
 Aïe...  
 C'est très embêtant.
 
 Mais alors que faire ?  
-Également écrire `.filter-button.has-tweakers` dans mes media queries ?  
+Également écrire `.filter-button.has-tweakers` dans mes media queries ?
 
 **Je trouve ce choix très ennuyeux**, car j'aimerais que lorsque je navigue de `.has-tweakers` en `.has-tweakers` dans mon fichier CSS à l'aide du raccourci clavier `CTRL+F`, je ne puisse pas **brutalement changer de contexte de configuration sans m'en rendre compte**.
 
-J'ai donc à la place fait le choix de créer une nouvelle classe, `.enable-tweakers-bypass`.  
+J'ai donc à la place fait le choix de créer une nouvelle classe, `.enable-tweakers-bypass`.
 
 Ainsi, je peux à présent patcher **en contournant mon tweaker initial**, de façon explicite dans mon code :
 
 ```css
 @media (min-width: 366px) and (max-width: 495px) {
   .filter-button.enable-tweakers-bypass {
-    padding: .5rem .8rem .5rem .5rem;
+    padding: 0.5rem 0.8rem 0.5rem 0.5rem;
   }
 }
 ```
@@ -819,6 +848,7 @@ Bravo ! :tada:
 {{< alert "circle-info" >}}
 Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
 {{< /alert >}}
+
 <p align="center">
 &nbsp;
 {{< button href="https://gustavewpm.github.io/OC-Booki/#?" target="_blank">}}
@@ -839,23 +869,26 @@ Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalis�
 {{< /alert >}}
 
 - Workflow
+
   - [:link: :fr: Mettez en place votre environnement front-end (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/6943241-mettez-en-place-votre-environnement-front-end)
   - [:link: :fr: Gérez du code avec Git et GitHub (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github)
   - [:link: :fr: Corrigez vos bugs et trouvez une solution à vos problèmes de code (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/8030706-corrigez-vos-bugs-et-trouvez-une-solution-a-vos-problemes-de-code)
   - [:link: :us: _Write code faster in VS Code with Emmet shortcuts (YouTube)_](https://www.youtube.com/watch?v=45eWEO0gRHI)
 
 - Commencer HTML et CSS
+
   - [:link: :fr: Apprendre l'HTML (_Grafikart_)](https://www.youtube.com/watch?v=oEAuNzWXRjM&list=PLjwdMgw5TTLUeixVGPNl1uZNeJy4UY6qX)
   - [:link: :fr: Apprendre le CSS (_Grafikart_)](https://www.youtube.com/watch?v=PE8FQ6zihhw&list=PLjwdMgw5TTLVjTZQocrMwKicV5wsZlRpj)
   - [:link: :fr: Créez votre site web avec HTML5 et CSS3 (_OpenClassrooms_)](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3)
   - [:link: :us: S'entraîner sur les sélecteurs CSS : _CSS Diner_](https://flukeout.github.io/)
   - [:link: :us: Calculer la spécificité de ses sélecteurs CSS](https://specificity.keegan.st)
   - [:link: :fr: Le modèle de boîte : _CSS Box Model_](https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-  - [:link: :globe_with_meridians: Commencer à utiliser Flexbox : _Flexbox froggy_](https://flexboxfroggy.com/#fr#?)
-  - [:link: :globe_with_meridians: Commencer à utiliser CSS Grids : _Grid garden_](https://cssgridgarden.com/#fr#?)
+  - [:link: :globe*with_meridians: Commencer à utiliser Flexbox : \_Flexbox froggy*](https://flexboxfroggy.com/#fr#?)
+  - [:link: :globe*with_meridians: Commencer à utiliser CSS Grids : \_Grid garden*](https://cssgridgarden.com/#fr#?)
   - [:link: :us: Se perfectionner en CSS : _CSS Tricks_](https://css-tricks.com#?)
 
 - Astuces de normalisation CSS
+
   - [:link: :fr: _Monkey patching_](https://fr.wikipedia.org/wiki/Monkey-Patch)
   - [:link: :us: _CSS variables: Scoping_](https://blog.logrocket.com/css-variables-scoping/)
   - [:link: :us: _How to Override CSS Styles_](https://www.w3docs.com/snippets/css/how-to-override-css-styles.html)
@@ -864,9 +897,11 @@ Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalis�
   - [:link: :fr: Comprendre le Viewport dans le Web mobile](https://www.alsacreations.com/article/lire/1490-Comprendre-le-Viewport-dans-le-Web-mobile.html#?)
 
 - Notions de design
+
   - [:link: :us: Fond perdu : _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/#?)
 
 - Optimisation du chargement des polices
+
   - [:link: :us: _The Fastest Way To Load Google Fonts In WordPress (Part 2)_](https://metabox.io/load-google-fonts-faster-wordpress/)
   - [:link: :us: _Reduce & Optimize Web Fonts For Page Speed_](https://pagespeedchecklist.com/optimize-fonts)
 
@@ -921,6 +956,7 @@ Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalis�
 {{< alert "circle-info" >}}
 Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
 {{< /alert >}}
+
 <p align="center">
 &nbsp;
 {{< button href="https://gustavewpm.github.io/OC-Booki/#?" target="_blank">}}
