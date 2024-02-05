@@ -1,11 +1,11 @@
 ---
-title: "Qui suis-je ?"
-description: "Découvrez mon parcours en tant que développeur web et ma passion pour la création de sites web attrayants et fonctionnels."
+title: 'Qui suis-je ?'
+description: 'Découvrez mon parcours en tant que développeur web et ma passion pour la création de sites web attrayants et fonctionnels.'
 showAuthor: false
 showDate: false
 showReadingTime: false
 showWordCount: false
-layout: "simple"
+layout: 'simple'
 ---
 
 <div align="center">

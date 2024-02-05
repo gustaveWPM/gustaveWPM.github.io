@@ -4,7 +4,9 @@
   "description": "Blowfish Template",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo server --minify -D -E -F"
+    "dev": "hugo server --minify -D -E -F",
+    "format": "prettier --log-level warn --write .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -13,6 +15,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "editorconfig": "^2.0.0",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.4.1",
+    "husky": "^8.0.3",
+    "commitizen": "^4.3.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@commitlint/cz-commitlint": "^18.2.0",
+    "lint-staged": "^15.0.2"
+  },
   "bugs": {
     "url": "https://github.com/nunocoracao/blowfish_template/issues"
   },

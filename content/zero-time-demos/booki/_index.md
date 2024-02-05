@@ -1,7 +1,7 @@
 ---
 title: "Booki (page d'accueil d'une agence de voyage)"
 date: 2023-01-27
-externalUrl: "https://gustavewpm.github.io/OC-Booki/"
+externalUrl: 'https://gustavewpm.github.io/OC-Booki/'
 showAuthor: false
 showDate: false
 showReadingTime: false
@@ -11,10 +11,9 @@ layout: simple
 
 ---
 
-{{< lead >}}
-Ce projet avait pour objectif d'**intégrer une interface de site web avec du code HTML et CSS**, en suivant une maquette préalablement conçue sur Figma.
-**Il ne s'agit que d'une intégration** : ce tout premier projet visait à apprendre comment passer d'un visuel de maquette à une page internet. 
-{{< /lead >}}
+{{< lead >}} Ce projet avait pour objectif d'**intégrer une interface de site web avec du code HTML et CSS**, en suivant une maquette préalablement
+conçue sur Figma. **Il ne s'agit que d'une intégration** : ce tout premier projet visait à apprendre comment passer d'un visuel de maquette à une page
+internet. {{< /lead >}}
 
 ---
 
@@ -41,11 +40,8 @@ Ce projet avait pour objectif d'**intégrer une interface de site web avec du co
 
 ### Code source (GitHub)
 
-{{< alert "circle-info" >}}
-Cliquez sur l'encadré ci-dessous pour **accéder au code source de mon projet**.  
-{{< /alert >}}
-&nbsp;
-{{< github repo="gustaveWPM/OC-Booki" >}}
+{{< alert "circle-info" >}} Cliquez sur l'encadré ci-dessous pour **accéder au code source de mon projet**.  
+{{< /alert >}} &nbsp; {{< github repo="gustaveWPM/OC-Booki" >}}
 
 ---
 

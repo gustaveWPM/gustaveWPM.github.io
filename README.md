@@ -3,7 +3,7 @@
 ## You have never done a portfolio?
 
 I didn't either...  
-This is my first portfolio.  
+This is my first portfolio.
 
 Project made during an _OpenClassrooms_ bootcamp.  
 [Learning path: _Développeur Web_](https://openclassrooms.com/fr/paths/717-developpeur-web)

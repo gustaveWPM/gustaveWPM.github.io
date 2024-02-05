@@ -1,8 +1,6 @@
 {
-    "name": "Gustave",
-    "image" : "/img/wpm-avatar.webp",
-    "bio": "Je suis un **développeur web** passionné par l'élégance du **TypeScript**.",
-    "social": [
-      { "github": "https://github.com/gustaveWPM" }
-  ]
+  "name": "Gustave",
+  "image": "/img/wpm-avatar.webp",
+  "bio": "Je suis un **développeur web** passionné par l'élégance du **TypeScript**.",
+  "social": [{ "github": "https://github.com/gustaveWPM" }]
 }

@@ -1,7 +1,7 @@
 ---
-title: "Enhanced MauGallery (moteur galerie photos)"
+title: 'Enhanced MauGallery (moteur galerie photos)'
 date: 2023-04-06
-externalUrl: "https://gustavewpm.github.io/enhanced-mauGallery/"
+externalUrl: 'https://gustavewpm.github.io/enhanced-mauGallery/'
 showAuthor: false
 showDate: false
 showReadingTime: false
@@ -11,10 +11,8 @@ layout: simple
 
 ---
 
-{{< lead >}}
-Ce projet avait pour objectif de **créer un moteur complet de galeries photos pour Bootstrap, en JavaScript uniquement**.
-Ce moteur dispose d'un *launcher asynchrone* et permet d'**instancier plusieurs galeries indépendantes**, configurables et manipulables.
-{{< /lead >}}
+{{< lead >}} Ce projet avait pour objectif de **créer un moteur complet de galeries photos pour Bootstrap, en JavaScript uniquement**. Ce moteur
+dispose d'un _launcher asynchrone_ et permet d'**instancier plusieurs galeries indépendantes**, configurables et manipulables. {{< /lead >}}
 
 ---
 
@@ -32,11 +30,8 @@ Ce moteur dispose d'un *launcher asynchrone* et permet d'**instancier plusieurs 
 
 ### Code source (GitHub)
 
-{{< alert "circle-info" >}}
-Cliquez sur l'encadré ci-dessous pour **accéder au code source de mon projet**.  
-{{< /alert >}}
-&nbsp;
-{{< github repo="gustaveWPM/enhanced-mauGallery" >}}
+{{< alert "circle-info" >}} Cliquez sur l'encadré ci-dessous pour **accéder au code source de mon projet**.  
+{{< /alert >}} &nbsp; {{< github repo="gustaveWPM/enhanced-mauGallery" >}}
 
 ---
 

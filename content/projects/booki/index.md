@@ -3,21 +3,21 @@ title: "Booki (Page d'accueil d'une agence de voyage)"
 date: 2023-06-04
 draft: false
 description: "Booki est le premier projet du parcours de développeur web d'OpenClassrooms qui consiste en l'intégration de maquettes Figma."
-topics: ["HTML", "CSS", "Front-end", "Bootcamp OC", "Débutant"]
-slug: "booki-integration-maquette"
-series: ["Mes projets réalisés en formation chez OpenClassrooms"]
+topics: ['HTML', 'CSS', 'Front-end', 'Bootcamp OC', 'Débutant']
+slug: 'booki-integration-maquette'
+series: ['Mes projets réalisés en formation chez OpenClassrooms']
 series_order: 1
 authors:
-  - "gustave"
+  - 'gustave'
 ---
 
 ---
 
-{{< lead >}}
-Tout premier projet du [**parcours de développeur web** d'_Open Classrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?) Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.
+{{< lead >}} Tout premier projet du [**parcours de développeur web** d'_Open Classrooms_,](https://openclassrooms.com/fr/paths/717-developpeur-web#?)
+Booki consiste en **l'intégration de maquettes Figma (version mobile, tablette et PC)**.
 
-C'est l'occasion parfaite de **commencer à créer des pages web** et apprendre des notions comme **le HTML sémantique**, ou encore **les variables et sélecteurs CSS !**
-{{< /lead >}}
+C'est l'occasion parfaite de **commencer à créer des pages web** et apprendre des notions comme **le HTML sémantique**, ou encore **les variables et
+sélecteurs CSS !** {{< /lead >}}
 
 ---
 
@@ -48,20 +48,15 @@ C'est l'occasion parfaite de **commencer à créer des pages web** et apprendre 
 
 ### Code source (GitHub)
 
-{{< alert "circle-info" >}}
-Cliquez sur l'encadré ci-dessous pour **accéder au code source de mon projet**.  
-{{< /alert >}}
-&nbsp;
-{{< github repo="gustaveWPM/OC-Booki#?" >}}
+{{< alert "circle-info" >}} Cliquez sur l'encadré ci-dessous pour **accéder au code source de mon projet**.  
+{{< /alert >}} &nbsp; {{< github repo="gustaveWPM/OC-Booki#?" >}}
 
 ---
 
 ## Pistes pour la réalisation du projet
 
-{{< alert >}}
-**Cet article n'est pas un guide pas-à-pas !**  
-Il s'agit d'un **condensé des réflexions que je me suis faites.**
-{{< /alert >}}
+{{< alert >}} **Cet article n'est pas un guide pas-à-pas !**  
+Il s'agit d'un **condensé des réflexions que je me suis faites.** {{< /alert >}}
 
 ---
 
@@ -74,17 +69,14 @@ Dans ce cas : **travaillez les ressources fournies avant de poursuivre.**
 **Afin de réaliser ce projet, il m'a fallu expérimenter en HTML et en CSS.**  
 Cela a comporté son **lot d'essais et de surprises**, et donc de choix à partager.
 
-{{< alert "circle-info" >}}
-Je vous recommande de garder dans l'un de vos onglets cette page web :  
+{{< alert "circle-info" >}} Je vous recommande de garder dans l'un de vos onglets cette page web :  
 [:link: Maquettes Figma de Booki (PC, tablette, mobile)](<https://www.figma.com/file/aen32jonHhD7JnIEL2b3sE/ARCHIVED-Maquettes-Booki-(desktop%2C-mobile%2C-tablette)?type=design&node-id=349-1>)
 {{< /alert >}}
 
 ### Bien commencer
 
-{{< alert "circle-info" >}}
-Avant de commencer à travailler, je vous recommande de comprendre (dans les grandes lignes) la syntaxe du HTML.  
-[:down_arrow: Vous trouverez en annexe une sélection de ressources pédagogiques](#liens-externes)
-{{< /alert >}}
+{{< alert "circle-info" >}} Avant de commencer à travailler, je vous recommande de comprendre (dans les grandes lignes) la syntaxe du HTML.  
+[:down_arrow: Vous trouverez en annexe une sélection de ressources pédagogiques](#liens-externes) {{< /alert >}}
 
 #### Avant de se lancer... (HTML)
 
@@ -98,13 +90,12 @@ Comme vous le constaterez, _l'indentation_ (espaces en début de ligne) est un s
 
 **Pour ce projet, vous n'aurez pas besoin d'extensions particulières dans votre éditeur de code.**
 
-Je vous recommande juste de vous assurer que votre _formatter_ fonctionne correctement afin de pouvoir rapidement **indenter automatiquement** votre code.
+Je vous recommande juste de vous assurer que votre _formatter_ fonctionne correctement afin de pouvoir rapidement **indenter automatiquement** votre
+code.
 
-{{< alert "circle-info" >}}
-Dans VS Code, utilisez la combinaison de touches suivante :  
+{{< alert "circle-info" >}} Dans VS Code, utilisez la combinaison de touches suivante :  
 `CTRL+Shift+P`\*, puis appelez la commande `Format Document`.  
-_\* Le raccourci clavier sera `Cmd+Shift+P` sur Mac._
-{{< /alert >}}
+_\* Le raccourci clavier sera `Cmd+Shift+P` sur Mac._ {{< /alert >}}
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
 {{< figure
@@ -116,9 +107,7 @@ _\* Le raccourci clavier sera `Cmd+Shift+P` sur Mac._
 >}}
 </div>
 
-{{< alert "circle-info" >}}
-Pour que cela se fasse automatiquement, vous pouvez activer l'option _Format on Save_ de VSCode.
-{{< /alert >}}
+{{< alert "circle-info" >}} Pour que cela se fasse automatiquement, vous pouvez activer l'option _Format on Save_ de VSCode. {{< /alert >}}
 
 ---
 
@@ -134,15 +123,14 @@ _Et si vous souhaitez utiliser un autre formatter que celui de VSCode..._
 - [:link: GitHub Copilot,](https://github.com/features/copilot)
 - ou autre outil IA de votre choix.
 
-{{< alert >}}
-**N'utilisez jamais du code que vous n'arrivez pas à raisonner !**  
+{{< alert >}} **N'utilisez jamais du code que vous n'arrivez pas à raisonner !**  
 N'hésitez pas à demander à votre agent conversationnel de reformuler sa réponse afin qu'elle soit plus simple, ou plus élégante, au moindre doute.
 {{< /alert >}}
 
 ##### Retour aux fondamentaux
 
-{{< alert "circle-info" >}}
-Vous trouverez toutes les ressources pédagogiques pour obtenir des fondamentaux solides en HTML [:down_arrow: dans les annexes de cet article de blog.](#liens-externes)  
+{{< alert "circle-info" >}} Vous trouverez toutes les ressources pédagogiques pour obtenir des fondamentaux solides en HTML
+[:down_arrow: dans les annexes de cet article de blog.](#liens-externes)  
 {{< /alert >}}
 
 **Néanmoins, je me permets deux petits conseils :**
@@ -163,7 +151,8 @@ Vous trouverez toutes les ressources pédagogiques pour obtenir des fondamentaux
 
 ##### De la maquette au HTML
 
-[:link: Aujourd'hui, _OpenClassrooms_ fournissent un squelette de code HTML dans l'énoncé de Booki.](https://github.com/OpenClassrooms-Student-Center/booki-starter-code) Ce n'était pas le cas lorsque j'avais réalisé mon projet.
+[:link: Aujourd'hui, _OpenClassrooms_ fournissent un squelette de code HTML dans l'énoncé de Booki.](https://github.com/OpenClassrooms-Student-Center/booki-starter-code)
+Ce n'était pas le cas lorsque j'avais réalisé mon projet.
 
 Outre ce point de détail, l'idée reste la même : prendre la maquette, et **l'annoter pour pouvoir la transcrire en HTML.**
 
@@ -177,21 +166,22 @@ Outre ce point de détail, l'idée reste la même : prendre la maquette, et **l'
 >}}
 </div>
 
-- L'annotation de vos maquettes avec des balises HTML permet de **clarifier la structure et l'organisation de votre site web**. Cela facilite la compréhension de la conception de votre site.
+- L'annotation de vos maquettes avec des balises HTML permet de **clarifier la structure et l'organisation de votre site web**. Cela facilite la
+  compréhension de la conception de votre site.
 
-- En annotant vos maquettes avec des balises HTML, vous créez **une référence claire pour le codage ultérieur**. Cela facilite la tâche des développeurs qui travaillent sur l'intégration, car ils comprennent immédiatement comment la conception doit être traduite en code.
+- En annotant vos maquettes avec des balises HTML, vous créez **une référence claire pour le codage ultérieur**. Cela facilite la tâche des
+  développeurs qui travaillent sur l'intégration, car ils comprennent immédiatement comment la conception doit être traduite en code.
 
 ##### La sémantique (SEO)
 
-Voici l'ensemble des éléments de sémantique HTML que j'ai choisi d'utiliser pour ce projet **(chaque élément de la liste est cliquable et vous renverra directement vers une page de documentation)** :
+Voici l'ensemble des éléments de sémantique HTML que j'ai choisi d'utiliser pour ce projet **(chaque élément de la liste est cliquable et vous
+renverra directement vers une page de documentation)** :
 
 - [:link: `<meta name="description" content="..." />`](https://fr.semrush.com/blog/basiques-seo-meta-description/)
 - [:link: `<title>`](https://fr.semrush.com/blog/balise-title/)
 
-{{< alert "circle-info" >}}
-Testez vos _meta description_ et _title_ grâce à un **simulateur de SERP**.  
-[:link: Google SERP Simulator](https://mangools.com/free-seo-tools/serp-simulator)
-{{< /alert >}}
+{{< alert "circle-info" >}} Testez vos _meta description_ et _title_ grâce à un **simulateur de SERP**.  
+[:link: Google SERP Simulator](https://mangools.com/free-seo-tools/serp-simulator) {{< /alert >}}
 
 - [:link: `<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
 - [:link: `<nav>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/nav)
@@ -202,22 +192,21 @@ Testez vos _meta description_ et _title_ grâce à un **simulateur de SERP**.
 - [:link: `<aside>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/aside)
 - [:link: `<footer>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/footer)
 - [:link: hN (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`)](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Heading_Elements)
-- [:link: Attribut `aria-label` pour le bouton de recherche](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label), afin que l'accessibilité sur mobile reste correcte
+- [:link: Attribut `aria-label` pour le bouton de recherche](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label),
+  afin que l'accessibilité sur mobile reste correcte
 
-{{< alert "circle-info" >}}
-**Votre utilisation des balises `<ul>` et `<li>` peut également s'avérer sémantique !**  
+{{< alert "circle-info" >}} **Votre utilisation des balises `<ul>` et `<li>` peut également s'avérer sémantique !**  
 [:link: **Discussion sur _Stack Overflow_ à ce sujet**](https://stackoverflow.com/questions/13416866/why-should-i-use-ul-li-in-my-html#:~:text=It%20is%20more%20semantically%20correct,on%20correct%20semantics%20to%20work.)
-{{< /alert >}}
-&nbsp;
-{{< alert >}}
-Faites aussi attention lors de votre utilisation des balises `<section>` et `<article>`. Celles-ci doivent impérativement contenir au moins une balise `<hN>` afin de totalement respecter les _standards W3C_.
-{{< /alert >}}
+{{< /alert >}} &nbsp; {{< alert >}} Faites aussi attention lors de votre utilisation des balises `<section>` et `<article>`. Celles-ci doivent
+impérativement contenir au moins une balise `<hN>` afin de totalement respecter les _standards W3C_. {{< /alert >}}
 
 ##### Le Validateur W3C (HTML)
 
-Le **validateur W3C** est un outil essentiel, car il vous permettra de vérifier si votre **code HTML et CSS** respectent les normes établies par le _World Wide Web Consortium_ (W3C).
+Le **validateur W3C** est un outil essentiel, car il vous permettra de vérifier si votre **code HTML et CSS** respectent les normes établies par le
+_World Wide Web Consortium_ (W3C).
 
-Cela vous aidera à **améliorer la qualité de votre code**, à améliorer la **compatibilité entre différents navigateurs** et rendre votre site web plus **accessible aux personnes handicapées**.
+Cela vous aidera à **améliorer la qualité de votre code**, à améliorer la **compatibilité entre différents navigateurs** et rendre votre site web plus
+**accessible aux personnes handicapées**.
 
 De plus, **le respect des normes du W3C peut contribuer positivement au référencement d'un site web** (SEO).
 
@@ -237,15 +226,16 @@ De plus, **le respect des normes du W3C peut contribuer positivement au référe
 
 ##### Fondamentaux
 
-{{< alert "circle-info" >}}
-Vous trouverez toutes les ressources pédagogiques pour obtenir des fondamentaux solides en CSS [:down_arrow: dans les annexes de cet article de blog.](#liens-externes)  
+{{< alert "circle-info" >}} Vous trouverez toutes les ressources pédagogiques pour obtenir des fondamentaux solides en CSS
+[:down_arrow: dans les annexes de cet article de blog.](#liens-externes)  
 {{< /alert >}}
 
 ##### Sélecteurs
 
 L'importance des sélecteurs CSS réside dans leur capacité à apporter **flexibilité et précision** lorsqu'il s'agit de styliser les pages web.
 
-En utilisant des sélecteurs bien choisis, il est possible de définir des styles pour des éléments individuels, des classes d'éléments ou des groupes d'éléments, ce qui permet **de personnaliser l'apparence d'une page de manière signifiante**.
+En utilisant des sélecteurs bien choisis, il est possible de définir des styles pour des éléments individuels, des classes d'éléments ou des groupes
+d'éléments, ce qui permet **de personnaliser l'apparence d'une page de manière signifiante**.
 
 <p align="center">
 {{< button href="https://flukeout.github.io/" target="_blank">}}
@@ -255,8 +245,7 @@ En utilisant des sélecteurs bien choisis, il est possible de définir des style
 
 ---
 
-{{< alert "circle-info" >}}
-Ces sélecteurs peuvent également s'avérer **utiles pour l'écriture d'outils de _scraping_ ou de _tests automatisés_.**
+{{< alert "circle-info" >}} Ces sélecteurs peuvent également s'avérer **utiles pour l'écriture d'outils de _scraping_ ou de _tests automatisés_.**
 {{< /alert >}}
 
 Par exemple :
@@ -265,9 +254,8 @@ Par exemple :
 - [_Playwright_,](https://playwright.dev)
 - [_Selenium + Beautiful Soup_](https://medium.com/ymedialabs-innovation/web-scraping-using-beautiful-soup-and-selenium-for-dynamic-page-2f8ad15efe25)...
 
-{{< alert "circle-info" >}}
-Regarder un peu de ce côté pourrait vous donner une approche complémentaire quant aux sélecteurs CSS, et notamment **comprendre l'importance et l'utilité des attributs `id` (ou `data`) pour la réalisation de tests automatisés.**
-{{< /alert >}}
+{{< alert "circle-info" >}} Regarder un peu de ce côté pourrait vous donner une approche complémentaire quant aux sélecteurs CSS, et notamment
+**comprendre l'importance et l'utilité des attributs `id` (ou `data`) pour la réalisation de tests automatisés.** {{< /alert >}}
 
 ---
 
@@ -287,37 +275,35 @@ Cependant, comme la page du validateur permettant d'activer ou non l'option « *
 
 ## Choix personnels
 
-{{< alert >}}
-Il n'était pas autorisé d'utiliser _SASS_, ni de _JavaScript_, ni de _bundler_...
-{{< /alert >}}
+{{< alert >}} Il n'était pas autorisé d'utiliser _SASS_, ni de _JavaScript_, ni de _bundler_... {{< /alert >}}
 
 ### Rappels des contraintes (arbitraires) de l'exercice
 
 Ce projet imposait la réalisation d'un projet **totalement vanilla**.  
 C'est-à-dire qu'il ne fallait rendre que deux fichiers : le fichier `index.html` et le fichier `style.css`.
 
-{{< alert "circle-info" >}}
-**Cependant, je souhaitais tout de même produire un code relativement modulaire.**  
+{{< alert "circle-info" >}} **Cependant, je souhaitais tout de même produire un code relativement modulaire.**  
 {{< /alert >}}
 
 #### Concernant le HTML
 
 Le code de ce projet est assez classique, et une bonne compréhension du HTML est suffisante pour en lire le code.  
-La seule particularité à noter est que j'ai ici fait un choix plutôt trivial quant à l'optimisation des images : afficher les images **avec une meilleure qualité selon la largeur du viewport... mais à l'inverse de ce qui aurait dû être fait : moins le viewport est large, plus la résolution des images affichées est grande.**
+La seule particularité à noter est que j'ai ici fait un choix plutôt trivial quant à l'optimisation des images : afficher les images **avec une
+meilleure qualité selon la largeur du viewport... mais à l'inverse de ce qui aurait dû être fait : moins le viewport est large, plus la résolution des
+images affichées est grande.**
 
 **Je souhaitais que les images de la page d'accueil soient correctement affichées sur ordinateur lorsque l'utilisateur zoome.**
 
-{{< alert "circle-info" >}}
-Plus l'on zoome, moins le viewport est large.
-{{< /alert >}}
+{{< alert "circle-info" >}} Plus l'on zoome, moins le viewport est large. {{< /alert >}}
 
-**Mais cela signifie aussi que les versions mobile/tablette doivent charger des images plus lourdes, car de meilleure qualité. On a donc un impact très négatif à cause de ce choix : au sacrifice de conserver un bon affichage de la page d'accueil lorsque celle-ci est zoomée sur ordinateur, on n'est pas très "Green tech" envers les mobiles et tablettes... !**
+**Mais cela signifie aussi que les versions mobile/tablette doivent charger des images plus lourdes, car de meilleure qualité. On a donc un impact
+très négatif à cause de ce choix : au sacrifice de conserver un bon affichage de la page d'accueil lorsque celle-ci est zoomée sur ordinateur, on
+n'est pas très "Green tech" envers les mobiles et tablettes... !**
 
 [:link: Comprendre le Viewport dans le Web mobile](https://www.alsacreations.com/article/lire/1490-Comprendre-le-Viewport-dans-le-Web-mobile.html#?)
 
-{{< alert "circle-info" >}}
-Ce serait plutôt l'inverse que l'on chercherait à prioriser : **avoir la page la plus légère possible pour les téléphones et tablettes**.
-{{< /alert >}}
+{{< alert "circle-info" >}} Ce serait plutôt l'inverse que l'on chercherait à prioriser : **avoir la page la plus légère possible pour les téléphones
+et tablettes**. {{< /alert >}}
 
 ##### Une catastrophe en termes de _Page speed_ ?
 
@@ -349,16 +335,12 @@ Malgré ce choix, les _Page speeds_ restent très bons à l'heure où j'écris c
 
 Cela est notamment lié au design de la version mobile où **seulement une image est chargée sur téléphone au-dessus de la _ligne de flottaison_**.
 
-{{< alert "circle-info" >}}
-**Les images ont été passées du _JPEG_ au _WEBP_, et le logo du _PNG_ au _SVG_.**  
-En l'occurrence, cela n'a pas changé grand chose aux indicateurs.
-{{< /alert >}}
+{{< alert "circle-info" >}} **Les images ont été passées du _JPEG_ au _WEBP_, et le logo du _PNG_ au _SVG_.**  
+En l'occurrence, cela n'a pas changé grand chose aux indicateurs. {{< /alert >}}
 
 &nbsp;
 
-{{< alert "circle-info" >}}
-J'ai tout de même ajouté des attributs `loading="lazy"` entre temps (c'est au moins ça de pris)...
-{{< /alert >}}
+{{< alert "circle-info" >}} J'ai tout de même ajouté des attributs `loading="lazy"` entre temps (c'est au moins ça de pris)... {{< /alert >}}
 
 Aucune de ces images ne sont dans le _CSS_ sous forme de _background image_ : **elles sont bien toutes présentes dans des balises HTML**.
 
@@ -369,28 +351,13 @@ Par exemple :
   <div class="lodging-card-wrapper has-tweakers">
     <article class="lodging-card">
       <picture class="thumbnail">
-        <source
-          srcset="
-            ./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg
-          "
-          media="(max-width: 768px)"
-        />
-        <source
-          srcset="
-            ./images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg
-          "
-          media="(max-width: 1281px)"
-        />
-        <img
-          src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-          alt="Aperçu de l'Auberge La Canebière"
-        />
+        <source srcset="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" media="(max-width: 768px)" />
+        <source srcset="./images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" media="(max-width: 1281px)" />
+        <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Aperçu de l'Auberge La Canebière" />
       </picture>
       <div class="lodging-card-description">
         <h3 class="is-title">Auberge La Canebière</h3>
-        <p class="price-p">
-          Nuit à partir de 25<span class="is-fw-semibold">€</span>
-        </p>
+        <p class="price-p">Nuit à partir de 25<span class="is-fw-semibold">€</span></p>
         <div class="rating-container">
           <i class="fas fa-star is-checked" aria-hidden="true"></i>
           <i class="fas fa-star is-checked" aria-hidden="true"></i>
@@ -404,26 +371,25 @@ Par exemple :
 </a>
 ```
 
-{{< alert "circle-info" >}}
-Résultat : j'ai une page **avec des images qui sont constamment en excellente qualité**.  
+{{< alert "circle-info" >}} Résultat : j'ai une page **avec des images qui sont constamment en excellente qualité**.  
 **Tout en honorant un _Page speed_ tout à fait décent**.  
-**Sans JavaScript ni intelligence d'optimisation particulière.**
-{{< /alert >}}
+**Sans JavaScript ni intelligence d'optimisation particulière.** {{< /alert >}}
 
 ---
 
 #### Concernant le CSS
 
-**Bien qu'HTML et CSS ne soient pas considérés comme des langages de programmation**, et que je ne consacrerai pas mon article de blog à répondre à ce débat : **le CSS est à mon sens un langage tout à fait intéressant et sur lequel on retrouve de la technicité et de l'intelligence dans son écriture**.
+**Bien qu'HTML et CSS ne soient pas considérés comme des langages de programmation**, et que je ne consacrerai pas mon article de blog à répondre à ce
+débat : **le CSS est à mon sens un langage tout à fait intéressant et sur lequel on retrouve de la technicité et de l'intelligence dans son
+écriture**.
 
 ##### Notions de Monkey patching et de modularisation
 
 Comme on en a plutôt l'habitude en programmation : **le code CSS est lu de haut en bas**.
 
-{{< alert "circle-info" >}}
-Et tout comme on a également l'habitude avec des langages de programmation dits _dynamiques_ : **il est possible de "Patcher" du code CSS en le réécrivant tout ou partie un peu plus bas que là où il a été déclaré pour la première fois.**  
-[:link: _Monkey patching_](https://fr.wikipedia.org/wiki/Monkey-Patch)
-{{< /alert >}}
+{{< alert "circle-info" >}} Et tout comme on a également l'habitude avec des langages de programmation dits _dynamiques_ : **il est possible de
+"Patcher" du code CSS en le réécrivant tout ou partie un peu plus bas que là où il a été déclaré pour la première fois.**  
+[:link: _Monkey patching_](https://fr.wikipedia.org/wiki/Monkey-Patch) {{< /alert >}}
 
 ##### Simple rappel concernant la notion de surchage en CSS
 
@@ -449,9 +415,9 @@ html p {
 **Le texte des paragraphes de ma page HTML sera bleu.**  
 On a ici « Surchargé » la propriété `color` du sélecteur `html p` pour la faire passer de la valeur `red` à la valeur `blue`.
 
-{{< alert "circle-info" >}}
-Dans le même principe : si l'on avait d'abord chargé un premier fichier CSS qui applique cette propriété `red`, puis un second qui applique finalement la propriété `blue`, on aurait donc modifié le comportement global de notre affichage **sans modifier le premier fichier**.
-{{< /alert >}}
+{{< alert "circle-info" >}} Dans le même principe : si l'on avait d'abord chargé un premier fichier CSS qui applique cette propriété `red`, puis un
+second qui applique finalement la propriété `blue`, on aurait donc modifié le comportement global de notre affichage **sans modifier le premier
+fichier**. {{< /alert >}}
 
 ---
 
@@ -484,21 +450,21 @@ J'aurais donc **seulement cinq couleurs à utiliser sur l'intégralité du desig
 
 J'ai à présent deux possibilités :
 
-- Écrire partout dans mon code, en dur, {{< wpm-hexacolor hex="#005270" >}} dès lors que j'ai besoin de la couleur A (**pas bien ! Pas bien du tout du tout !**)
+- Écrire partout dans mon code, en dur, {{< wpm-hexacolor hex="#005270" >}} dès lors que j'ai besoin de la couleur A (**pas bien ! Pas bien du tout du
+  tout !**)
 - **Créer une variable `--primary-color` et lui donner la valeur {{< wpm-hexacolor hex="#005270" >}}, puis écrire `var(--primary-color)`.**
 
 ---
 
 ###### N'oubliez pas la notion de portée lexicale !
 
-{{< alert "circle-info" >}}
-Comme dans d'autres langages de programmation, les variables du CSS sont « Scopées ».  
-[:link: CSS variables: Scoping](https://blog.logrocket.com/css-variables-scoping/)
-{{< /alert >}}
+{{< alert "circle-info" >}} Comme dans d'autres langages de programmation, les variables du CSS sont « Scopées ».  
+[:link: CSS variables: Scoping](https://blog.logrocket.com/css-variables-scoping/) {{< /alert >}}
 
 Cela permet d'appliquer une intelligence encore plus fine à son utilisation des variables.
 
-**Néanmoins, dans le cas d'un nuancier à appliquer sur l'intégralité d'un produit, c'est bien plus un handicap qu'une force. C'est pour cette raison que l'on déclarera ces variables dans le scope global, dans le pseudo-élément `:root`.**
+**Néanmoins, dans le cas d'un nuancier à appliquer sur l'intégralité d'un produit, c'est bien plus un handicap qu'une force. C'est pour cette raison
+que l'on déclarera ces variables dans le scope global, dans le pseudo-élément `:root`.**
 
 ---
 
@@ -507,8 +473,7 @@ Cela permet d'appliquer une intelligence encore plus fine à son utilisation des
 Le pseudo-élément `:root` va nous permettre de déclarer des _variables globales_.  
 Ces variables sont utilisables dans tous les fichiers CSS d'un projet.
 
-{{< alert "circle-info" >}}
-Dans notre cas, nous n'avons qu'un seul fichier de feuille de style : `style.css`.  
+{{< alert "circle-info" >}} Dans notre cas, nous n'avons qu'un seul fichier de feuille de style : `style.css`.  
 Nos variables seront donc utilisables dans l'intégralité de ce fichier.  
 **Gardez tout de même à l'esprit que dans le cas où vous ajouteriez de nouveaux fichiers CSS, ces variables y seraient également accessibles.**
 {{< /alert >}}
@@ -518,7 +483,7 @@ Je vais donc pouvoir utiliser ce pseudo-élément, comme un module de configurat
 ```css
 :root {
   /* Configuration.globalLayout => font */
-  --booki-font: "Raleway";
+  --booki-font: 'Raleway';
 
   /* Configuration.chart => Static Colors */
   --booki-chart-primary: #0065fc;
@@ -552,14 +517,14 @@ Les paragraphes de ma page auront alors la couleur : {{< wpm-hexacolor hex="#006
 
 Je voudrais, immédiatement après décrire la configuration globale de chacun de mes éléments dans mon code CSS.
 
-**J'aurais bien aimé pouvoir séparer ces informations dans plusieurs fichiers CSS, puis jouer avec la _at-rule_ `@import` et un _bundler_ afin de pouvoir tout regrouper dans un seul fichier CSS au déploiement...**
+**J'aurais bien aimé pouvoir séparer ces informations dans plusieurs fichiers CSS, puis jouer avec la _at-rule_ `@import` et un _bundler_ afin de
+pouvoir tout regrouper dans un seul fichier CSS au déploiement...**
 
-{{< alert >}}
-**Mais ce n'était pas possible !**  
-Les contraintes imposées sur ce projet ne me le permettaient pas.
-{{< /alert >}}
+{{< alert >}} **Mais ce n'était pas possible !**  
+Les contraintes imposées sur ce projet ne me le permettaient pas. {{< /alert >}}
 
-Afin de clarifier cette volonté dans mon choix de réalisation du projet, j'ai donc décidé d'appeler cette spécificité des _Tweakers_ dans mon code, et ajouté une classe `.has-tweakers` sur les éléments concernés.
+Afin de clarifier cette volonté dans mon choix de réalisation du projet, j'ai donc décidé d'appeler cette spécificité des _Tweakers_ dans mon code, et
+ajouté une classe `.has-tweakers` sur les éléments concernés.
 
 Ainsi :
 
@@ -578,17 +543,13 @@ Ainsi :
 /* Mutables: Header navigation menu's colors (NOT on mouse-over) */
 .header-nav.has-tweakers {
   --_menu-active-item-hyperlink-color: inherit;
-  --_menu-active-item-border-top-color: var(
-    --booki-inactive-menu-elm-indicator-color
-  );
+  --_menu-active-item-border-top-color: var(--booki-inactive-menu-elm-indicator-color);
 }
 
 /* Mutables: Header navigation menu's colors (WHEN on mouse-over) */
 .header-nav-item.has-tweakers:hover {
   --_menu-active-item-hyperlink-color: var(--booki-chart-primary);
-  --_menu-active-item-border-top-color: var(
-    --booki-active-menu-elm-indicator-color
-  );
+  --_menu-active-item-border-top-color: var(--booki-active-menu-elm-indicator-color);
   border-top-width: var(--_border-top-width);
 }
 
@@ -596,7 +557,8 @@ Ainsi :
 ```
 
 J'ai également fait le choix d'écrire sous forme de variables certaines spécifications.  
-Ce qui m'a permis par exemple de **calculer dynamiquement la largeur du wrapper qui englobe tout le contenu de ma page web selon la largeur spécifiée sur la maquette (1400 pixels), et ma gestion d'état du _fond perdu_ de ma page.**
+Ce qui m'a permis par exemple de **calculer dynamiquement la largeur du wrapper qui englobe tout le contenu de ma page web selon la largeur spécifiée
+sur la maquette (1400 pixels), et ma gestion d'état du _fond perdu_ de ma page.**
 
 ```css
 /* Constants: Top level wrapper width */
@@ -628,7 +590,8 @@ Par la suite, mon code comportera la ligne :
 /* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
 ```
 
-Cela signifie que **je signale à mon utilisateur que les lignes ci-après du code seront plus techniques : il ne s'agit plus de _Tweakers_ que n'importe qui pourrait venir modifier sans provoquer des comportements à la fois inattendus et difficilement compréhensibles**.
+Cela signifie que **je signale à mon utilisateur que les lignes ci-après du code seront plus techniques : il ne s'agit plus de _Tweakers_ que
+n'importe qui pourrait venir modifier sans provoquer des comportements à la fois inattendus et difficilement compréhensibles**.
 
 J'ai donc un code qui respecte une certaine **notion de séparation de configuration et d'implémentation.**
 
@@ -636,18 +599,17 @@ Par la suite, le code deviendra assez classique pour un utilisateur habitué du 
 
 ##### Gestion d'états
 
-{{< alert "circle-info" >}}
-Peut-on considérer les _media queries_ comme des _événements_ ?  
-Et peut-on commencer à se rapprocher d'une logique de _gestion d'états_ ?
-{{< /alert >}}
+{{< alert "circle-info" >}} Peut-on considérer les _media queries_ comme des _événements_ ?  
+Et peut-on commencer à se rapprocher d'une logique de _gestion d'états_ ? {{< /alert >}}
 
 ###### Cas d'application dans Booki
 
 **La maquette de Booki n'était pas très précise en tout point** concernant l'œil de designer qu'il fallait lui apporter.  
-Il était question d'une _largeur maximale de 1400 pixels_. Mais : **aucun aperçu concret de ce que donne le site sur un écran de 1920 pixels de large**. Hum...
+Il était question d'une _largeur maximale de 1400 pixels_. Mais : **aucun aperçu concret de ce que donne le site sur un écran de 1920 pixels de
+large**. Hum...
 
-{{< alert "circle-info" >}}
-**Plus flou encore** : selon que l'on regarde la maquette de la version ordinateur, tablette ou mobile, on constate que les marges sur les côtés changent.  
+{{< alert "circle-info" >}} **Plus flou encore** : selon que l'on regarde la maquette de la version ordinateur, tablette ou mobile, on constate que
+les marges sur les côtés changent.  
 {{< /alert >}}
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
@@ -683,12 +645,12 @@ Il était question d'une _largeur maximale de 1400 pixels_. Mais : **aucun aper�
 Ce qui était attendu était de tout simplement laisser les côtés de la page transparents.  
 Finalement, il aurait suffi de bêtement centrer la page et laisser un fond blanc, et l'illusion aurait été suffisante...
 
-{{< alert "circle-info" >}}
-Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !  
+{{< alert "circle-info" >}} Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !  
 [:link: _There Will Be Bleed (and other design terms you should know)_](https://dar.uga.edu/2019/there-will-be-bleed-and-other-design-terms-you-should-know/#?)
 {{< /alert >}}
 
-**C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite entre mon intégration des _marges_ et du _fond perdu_ de la page web !**
+**C'est donc pour cette raison que j'ai décidé d'avoir une distinction explicite entre mon intégration des _marges_ et du _fond perdu_ de la page web
+!**
 
 À présent, si j'applique un arrière-plan qui n'est pas blanc, je vois de façon évidente que cette spécificité a bien été comprise et appliquée.
 
@@ -704,13 +666,13 @@ Mais en design, la notion de _marges_ et de _fond perdu_ n'est pas la même !
 
 ###### Implémentation d'une logique de largeur dynamique et de fond perdu
 
-Dans mon pseudo-élément `:root`, je définis ma variable globale `--booki-bleed-current-state-value`, et je lui donne comme valeur initiale : `var(--booki-bleed-desktop)`.
+Dans mon pseudo-élément `:root`, je définis ma variable globale `--booki-bleed-current-state-value`, et je lui donne comme valeur initiale :
+`var(--booki-bleed-desktop)`.
 
 `var(--booki-bleed-desktop)` vient de devenir la valeur de _fallback_ de `--booki-bleed-current-state-value`.
 
-{{< alert "circle-info" >}}
-Pour rappel : nous sommes sur une intégration en _Desktop First_. C'est pour cette raison que c'est `var(--booki-bleed-desktop)` qui a été choisi.
-{{< /alert >}}
+{{< alert "circle-info" >}} Pour rappel : nous sommes sur une intégration en _Desktop First_. C'est pour cette raison que c'est
+`var(--booki-bleed-desktop)` qui a été choisi. {{< /alert >}}
 
 À présent, je vais aller modifier cette variable dans mes _breakpoints_.
 
@@ -786,10 +748,8 @@ Puis que je décide de _monkey patch_ la valeur de cette propriété `padding` p
 Et bien : **ça ne fonctionne pas !**  
 `padding` reste à une valeur de `.9rem 1.2rem .9rem .9rem`.
 
-{{< alert "circle-info" >}}
-Nous pouvons retrouver l'origine de ce problème grâce à cet outil.  
-[:link: Calculer la spécificité de ses sélecteurs CSS](https://specificity.keegan.st)
-{{< /alert >}}
+{{< alert "circle-info" >}} Nous pouvons retrouver l'origine de ce problème grâce à cet outil.  
+[:link: Calculer la spécificité de ses sélecteurs CSS](https://specificity.keegan.st) {{< /alert >}}
 
 <div class="wpm blog-post-illustration-figure is-resized centered-figcaption">
 {{< figure
@@ -801,10 +761,9 @@ Nous pouvons retrouver l'origine de ce problème grâce à cet outil.
 >}}
 </div>
 
-{{< alert >}}
-**Cela signifie que les propriétés que l'on écrit dans `.filter-button.has-tweakers` sont prioritaires sur celles que l'on écrit dans `.filter-button` !**  
-Il s'agit d'une particularité dans la logique de _Monkey Patch_ de CSS dont je n'avais pas parlé jusqu'à présent.
-{{< /alert >}}
+{{< alert >}} **Cela signifie que les propriétés que l'on écrit dans `.filter-button.has-tweakers` sont prioritaires sur celles que l'on écrit dans
+`.filter-button` !**  
+Il s'agit d'une particularité dans la logique de _Monkey Patch_ de CSS dont je n'avais pas parlé jusqu'à présent. {{< /alert >}}
 
 Aïe...  
 C'est très embêtant.
@@ -812,7 +771,8 @@ C'est très embêtant.
 Mais alors que faire ?  
 Également écrire `.filter-button.has-tweakers` dans mes media queries ?
 
-**Je trouve ce choix très ennuyeux**, car j'aimerais que lorsque je navigue de `.has-tweakers` en `.has-tweakers` dans mon fichier CSS à l'aide du raccourci clavier `CTRL+F`, je ne puisse pas **brutalement changer de contexte de configuration sans m'en rendre compte**.
+**Je trouve ce choix très ennuyeux**, car j'aimerais que lorsque je navigue de `.has-tweakers` en `.has-tweakers` dans mon fichier CSS à l'aide du
+raccourci clavier `CTRL+F`, je ne puisse pas **brutalement changer de contexte de configuration sans m'en rendre compte**.
 
 J'ai donc à la place fait le choix de créer une nouvelle classe, `.enable-tweakers-bypass`.
 
@@ -828,12 +788,10 @@ Ainsi, je peux à présent patcher **en contournant mon tweaker initial**, de fa
 
 Cependant, **cela induit de devoir polluer mon code HTML avec une classe supplémentaire**.
 
-{{< alert "circle-info" >}}
-Dans un projet dépourvu des contraintes initiales évoquées, **nous aurions pu éviter ces casse-têtes et simplement passer par un _bundler CSS_ afin de pouvoir être tout aussi modulaire, mais sans devoir induire un code aussi inutilement sophistiqué.**
-{{< /alert >}}
-&nbsp;
-{{< alert "circle-info" >}}
-Si vous n'êtes pas sûr d'avoir bien compris la **notion de spécificité en CSS**, cette vidéo de Grafikart vous l'expliquera à merveille.  
+{{< alert "circle-info" >}} Dans un projet dépourvu des contraintes initiales évoquées, **nous aurions pu éviter ces casse-têtes et simplement passer
+par un _bundler CSS_ afin de pouvoir être tout aussi modulaire, mais sans devoir induire un code aussi inutilement sophistiqué.** {{< /alert >}}
+&nbsp; {{< alert "circle-info" >}} Si vous n'êtes pas sûr d'avoir bien compris la **notion de spécificité en CSS**, cette vidéo de Grafikart vous
+l'expliquera à merveille.  
 {{< /alert >}}
 
 {{< youtube id="4T4vRdhkCxw" title=" Découverte du CSS (12/31) : La spécificité des sélecteurs" >}}
@@ -845,8 +803,7 @@ Bravo ! :tada:
 
 **Si ce n'est pas déjà fait, vous pouvez voir le résultat en lançant la démo de ce projet.**
 
-{{< alert "circle-info" >}}
-Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
+{{< alert "circle-info" >}} Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
 {{< /alert >}}
 
 <p align="center">
@@ -864,9 +821,7 @@ Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalis�
 
 ### Liens externes
 
-{{< alert "circle-info" >}}
-**Si vous êtes dév : il y a aussi quelques liens en bonus pour vous.**
-{{< /alert >}}
+{{< alert "circle-info" >}} **Si vous êtes dév : il y a aussi quelques liens en bonus pour vous.** {{< /alert >}}
 
 - Workflow
 
@@ -953,8 +908,7 @@ Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalis�
 
 **Si ce n'est pas déjà fait, vous pouvez voir le résultat en lançant la démo de ce projet.**
 
-{{< alert "circle-info" >}}
-Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
+{{< alert "circle-info" >}} Cliquez sur le bouton ci-dessous pour **découvrir la page web que j'ai réalisée** et **accédez-y dès maintenant !**
 {{< /alert >}}
 
 <p align="center">

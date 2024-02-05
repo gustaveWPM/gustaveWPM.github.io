@@ -1,3 +1,3 @@
 ---
-title: "Gustave"
+title: 'Gustave'
 ---
